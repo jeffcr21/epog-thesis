@@ -1,0 +1,209 @@
+---
+title: 'Green National Innovative Capacity'
+author: 'Jeff Rodriguez'
+date: 'June 2023'
+institution: 'Université de Technologie de Compiègne, Sorbonne Université, Université Paris Cité, Uniiversità degli Studi di Torino'
+#division: 'Mathematics and Natural Sciences'
+advisor: 'Diego Useche, PhD'
+# If you have more two advisors, un-silence line 7
+altadvisor: 'Aldo Geuna, PhD'
+department: 'Economics'
+degree: 'Master of Science'
+knit: bookdown::render_book
+site: bookdown::bookdown_site
+
+# The next two lines allow you to change the spacing in your thesis. You can 
+# switch out \onehalfspacing with \singlespacing or \doublespacing, if desired.
+header-includes:
+    - \usepackage{setspace}\onehalfspacing
+
+# This will automatically install the {remotes} package and {thesisdown}
+# Change this to FALSE if you'd like to install them manually on your own.
+params:
+  'Install needed packages for {thesisdown}': True
+  
+# Remove the hashtag to specify which version of output you would like.
+# Can only choose one at a time.
+output:
+  thesisdown::thesis_pdf: default 
+#  thesisdown::thesis_gitbook: default         
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+
+# If you are creating a PDF you'll need to write your preliminary content 
+# (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
+# for the .RMD files. If you are NOT producing a PDF, delete or silence
+# lines 25-39 in this YAML header.
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "00-abstract.Rmd")), collapse = "\n  ")`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab 
+# is needed on the line after the `|`.
+acknowledgements: |
+  I want to thank a few people.
+dedication: |
+  You can have a dedication here if you wish. 
+preface: |
+  This is an example of a thesis setup to use the reed thesis document class 
+  (for LaTeX) and the R bookdown package, in general.
+abbreviations:
+  # ABC: American Broadcasting Company
+  # CBS: Colombia Broadcasting System
+  # CUS: Computer User Services
+  # PBS: Public Broadcasting System
+  # NBC: National Broadcasting Company
+# Note that abbreviations in lowercase letters will NOT be automatically capitalized
+# Delete or silence the abbreviations section if you do not want a list of abbreviations
+  
+# Specify the location of the bibliography below
+bibliography: Green National Innovative Capacity.bib
+# Download your specific csl file and refer to it in the line below.
+csl: csl/apa.csl
+lot: true
+lof: true
+always_allow_html: true
+---
+
+<!--
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
+metadata used to produce the document.  Be careful with spacing in this header!
+
+If you'd prefer to not include a Dedication, for example, simply delete the section entirely, or silence them (add # before each line). 
+
+If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
+
+If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
+
+If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
+-->
+
+```{r include_packages, include=FALSE}
+# This chunk ensures that the thesisdown package is
+# installed and loaded. This thesisdown package includes
+# the template files for the thesis.
+if (!require(remotes)) {
+  if (params$`Install needed packages for {thesisdown}`) {
+    install.packages("remotes", repos = "https://cran.rstudio.com")
+  } else {
+    stop(
+      paste('You need to run install.packages("remotes")",
+            "first in the Console.')
+    )
+  }
+}
+if (!require(thesisdown)) {
+  if (params$`Install needed packages for {thesisdown}`) {
+    remotes::install_github("ismayc/thesisdown")
+  } else {
+    stop(
+      paste(
+        "You need to run",
+        'remotes::install_github("ismayc/thesisdown")',
+        "first in the Console."
+      )
+    )
+  }
+}
+library(thesisdown)
+# Set how wide the R output will go
+options(width = 70)
+```
+
+<!--
+The acknowledgments, preface, dedication, and abstract are added into the PDF
+version automatically by inputting them in the YAML at the top of this file.
+Alternatively, you can put that content in files like 00--prelim.Rmd and
+00-abstract.Rmd like done below.
+-->
+
+
+
+```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00--prelim.Rmd")}
+
+```
+
+```{r eval=!knitr::is_latex_output(), child=here::here("prelims", "00-abstract.Rmd")}
+
+```
+
+<!-- The {.unnumbered} option here means that the introduction will be 
+"Chapter 0." You can also use {-} for no numbers on chapters.
+-->
+
+# Introduction {.unnumbered}
+
+Innovation and technological change have for a long time been recognized
+as main drivers of economic growth [@solowTechnicalChangeAggregate1957;
+@romerEndogenousTechnologicalChange1990;
+@nelsonBringingInstitutionsEvolutionary2002;
+@lundvallLearningEconomyEconomics2016]. However the increasing concerns
+about environmental degradation and climate change have raised the
+interest in the role innovation can play in other areas, particularly as
+a transformative force to tackle societal challenges like the climate
+crisis. There is a growing consensus that radical innovation is
+necessary to achieve the goals set by the world in terms of reduction of
+emissions, and also in general for a sustainable future
+[@aghionColdStartGreen2009;
+@delriogonzalezEmpiricalAnalysisDeterminants2009;
+@ekinsEcoinnovationEnvironmentalSustainability2010;
+@gerlaghLinkingEnvironmentalInnovation2008].
+
+However, the factors that drive environmental innovation are not well
+understood, particularly at the national level. This thesis aims to
+address this gap in the literature by investigating the determinants of
+environmental innovation in OECD countries between 2000 and 2020.
+Specifically, the thesis examines the role of national innovation
+infrastructure, environmental policy, and legal and political factors in
+driving environmental innovation. In so doing, it builds on the
+literature on National Innovation Systems
+[@lundvallNationalSystemsInnovation1992], and in particular, adapting
+the empirical framework of National Innovative Capacity developed by
+@furmanDeterminantsNationalInnovative2002 to environmental technologies.
+
+The main contributions of this thesis are twofold. First, in the
+framework of the "twin transitions" digital and environmental, it gives
+insights on the factors driving green innovative capacity at the
+national level. Indeed, the economic literature has explored the main
+determinats of eco-innovation at the firm level
+[@brunnermeierDeterminantsEnvironmentalInnovation2003;
+@horbachDeterminantsEnvironmentalInnovation2008], or explored the impact
+of specific environmental policies on the green innovative activity
+[@francoEffectWithinSectorUpstream2017;
+@gerlaghLinkingEnvironmentalInnovation2008;
+@poppEnvironmentalPolicyInnovation2019]. However, there is a gap in
+understanding how different policies and institutional mechanisms
+interact to impact the output of environmental technologies.
+Understanding those determinants is imperative to unleash the potential
+of innovation to contribute to the environmental transition.
+
+Second, this thesis employs a robust econometric model to analyze panel
+data on green patents, which provides a quantitative measure of
+environmental innovation. Importantly, the approach taken in this thesis
+is systemic, based on the National Innovation System approach and, more
+in general, on the framework of evolutionary economics
+[@nelsonEvolutionaryTheoryEconomic1982;
+@nelsonModernEvolutionaryEconomics2018a]. This means that it takes into
+account the complex interactions between different actors, institutions,
+and policies that shape innovation outcomes. By adopting this systemic
+perspective, the thesis provides a more comprehensive and nuanced
+understanding of the determinants of environmental innovation. This is
+particularly relevant given the multi-faceted and dynamic nature of
+environmental challenges, which require coordinated and adaptive policy
+mixes across different levels and sectors.
+
+For the empirical work, the thesis uses a panel data fixed effects model
+on a panel OECD countries between 2000-2020. Green innovation is
+measured using patent data. The main explanatory variables are national
+innovation infrastructure, environmental policy, and legal and political
+factors. Negative Binomial and Poisson regression models are also used
+to test the robustness of the findings. The data is sourced from the
+OECD Green Growth Indicators Databse, as well as other publicly
+available sources.
+
+[FINDINGS]
+
+The thesis proceeds as follows: The next section presents the main
+theoretical building blocks of the systemic approach that informs this
+work. Then there is detailed description of the data and methods used
+for the empirical analysis. Finally, the results are presented and
+discussed.
