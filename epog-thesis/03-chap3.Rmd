@@ -77,6 +77,290 @@ flights <- read.csv("data/flights.csv", stringsAsFactors = FALSE)
 
 ```
 
-This section presents the main results of the analysis of the data as explained *supra*. The first part will look at where environmental innovation is happening more intensely within the OECD countries; and also presents a descriptive analysis of the main explanatory variables. Since we are both interested in the time and spatial dimension, the descriptive analysis will show the evolution of each indicator in time and also the variation across units (Countries).
+This section presents the results of the application of the econometric model as outlined above. Different specifications are tested to determine the ones that better fit the data and provides with interpretations for the results. In a second stage, it presents a slightly modified version of the model that includes interactions among the variables. Finally, it also offers the results of the robustness tests.
 
-Before going into it, Table \@ref(tab:descriptive-stats) shows the basic statistics for each of the relevant variables. This includes the two dependent variables (green patents and green patents per million population), and the battery of independent variables.
+In the first place, it a good practice to study the relationship between the independent variables. As mentioned before, it is expected to find some string correlations, especially in the governance indicators. 
+
+Figure \@ref(fig:corr-matrix) shows the correlation matrix the selected independent variables. We can observe that effectively there is a strong correlation between control of corruption and regulatory quality, that was already expected. The correlations of the other variables exist, but do not seem to be a cause for concern.
+
+```{r, echo=FALSE, include=FALSE}
+df5 <- df4 %>% ungroup() %>%  select(-c(Country, Year, green_patents, stock_gp, gp_mill))
+cor_matrix <- cor(df5, use = "complete.obs", method = "pearson")
+
+colnames <- c("GERD(PPP$)", "R&D personnel",
+             "Public spending in tertiary education", "GERD performed by the HES",
+             "GERD financed by  Business", "EPSI", "Green taxes",
+             "Environmental R&D", "Regulatory Quality", "Control of corruption")
+
+colnames(cor_matrix) <- colnames
+rownames(cor_matrix) <- colnames
+
+```
+
+
+```{r, echo=FALSE}
+#| label: corr-matrix
+#| fig-cap: Correlation matrix
+cor_matrix_final <- corrplot(cor_matrix, method = "color", type = "upper", tl.col = "black", tl.srt = 45,
+         addCoef.col = "black", addCoefasPercent = TRUE, number.cex = 0.8, tl.cex = 0.8)
+```
+
+## First model specification: Representative Indicator
+
+The first exploratory analysis is presented in Table \@ref(tab:exp-reg). It shows a simple regression using one representative indicator for each of the three main variables identified as drivers of green innovation. The first two models use the total number of green patents as the dependent variable, while the last two use the green patents productivity, i.e. green patents per million people. I use two dependent variables to assess if there are significant differences in the effects on each of them.
+
+On the other hand, Models (1) and (3) use a fixed effects model; while (2) and (4) use a random effects model. Appendix 2 shows the results of a Hausman test comparing the fixed effects model and the random effects model. In the Hausman test, the null hypothesis is that the preferred model is random effects vs. the alternative the fixed effects. It basically tests whether the unique errors are correlated with the regressors, the null hypothesis is they are not.
+
+The result of the Hausman test shows a very low p-value, which indicates that the fixed effects model should be preferred. This is also consistent with the discussion *supra*, since the onerous assumptions required by the random effects model are not present in the data used for this work.
+
+As a result, models (1) and (3) should be preferred. In the case in hand, they both show a positive and significant effect of the three indicators on the production of green technologies. In particular, results from model (1) suggest that an increase in 1% in the GERD is associated with a 0,67% increase in the output of green patents, keeping other variables constant. The effect of the EPSI and Regulatory Qualities can be understood as semi elasticities, so that an increase of one unit point in each of them should be associated with a 0,15% and 0,28% increase in the output of green patents. Since each of this three variables in accounted in different units it is not possible to make an adequate comparison in terms of which has a greater effect on the outcome. 
+
+Since I am more interested in the _production_ of green patents (as opposed to the _productivity_) and given the fact that models (1) and (3) exhibit similar results and magnitudes, but Model (1) has a better bit, I will use the log of green patents for the next specification, dropping the per capita measure.
+
+```{r, echo=FALSE, include=FALSE}
+exp_1 <- plm(log_gp ~ log_gerd + epsi + reg_quality, data = df2, index = c("Country", "Year"), model = "within")
+summary(exp_1)
+
+exp_2 <- plm(log_gp ~ log_gerd + epsi + reg_quality, data = df2, index = c("Country", "Year"), model = "random")
+summary(exp_2)
+
+exp_3 <- plm(log_gp_mill ~ log_gerd + epsi + reg_quality, data = df2, index = c("Country", "Year"), model = "within")
+summary(exp_3)
+
+exp_4 <- plm(log_gp_mill ~ log_gerd + epsi + reg_quality, data = df2, index = c("Country", "Year"), model = "random")
+summary(exp_4)
+```
+
+
+```{r, results='asis', echo=FALSE}
+stargazer(exp_1, exp_2, exp_3, exp_4,
+          type = "latex",
+          title = "Basic specification",
+          model.numbers = TRUE,
+          covariate.labels = c("Intercept", "GERD (log)", "EPSI", "Regulatory Quality (RQ)"),
+          dep.var.labels = c("Green patents (log)", "Green patents per capita (log)"),
+          column.labels = c("(FE)", "(RE)", "(FE)", "(RE)"), 
+          intercept.bottom = FALSE,
+          digits = 2,
+          header = FALSE,
+          no.space = TRUE,
+          label = "tab:exp-reg")
+```
+
+## Extended model
+
+The results from the first exploratory model are promising, but it very simplistic model might suffer from omitted variable bias.
+
+Table \@ref(tab:comp-model) shows the complete model specification which include additional variables that nuance the effect observed in the basic specification. Model (5) includes 6 independent variables, while Model (7) includes the full battery of 11 independent variables. The two models are quite consistent and we do not observe big differences between them. In general, environmental policy variables take positive values, with ESPI and environmental R&D being highly significant; green taxes takes a positive value but is not statistically significant. The common innovation infrastructure indicators show a mixed effect: GERD and spending in higher education (HE) appear to be positive and very significant; HERD financed by the Business Sector also has a significant even in much lower effect; while GERD financed by the Business Sector appears to have a small negative effect in both models; GERD performed by Higher Education shows a small but not significant negative effect. Meanwhile, the indicators of governance become statistically insignificant and show opposite signs.
+
+This partially confirm the hypothesis outlined above. The sectoral policies (environmental stringency and environmental R&D support) are shown to be drivers of green innovation. A more stringent policy environment increases the prices of “dirty” technologies and therefore creates the right incentives for entrepreneurs to invest in creating new “green” technologies. This is reinforced by public support for environmental R&D. The effects of an increase of a unit in each of the indicators is associated with a 0,15% (0.13% in Model (6)) and 0,04% increase in the output of green patents. The magnitude of the effect of EPSI is similar to that found in Model (1). This result is consistent with previous literature: @moroNationalInnovativeCapacity2019 also finds a positive effect of environmental policy on green water-related technologies; while @brunelGreenInnovationGreen2019 do not use the EPSI but still finds that sectoral policies (in renewable energy) increase domestic production of innovation in OECD countries.
+
+On the common innovation infrastructure we observe a more nuanced effect. On one side, both models shows a very strong relationship between R&D investments and green technology patents. The coefficient suggests that a 1% increase in GERD is associated with a 0.62%70.67 increase in green patents (similar to the one found in Model (1)). In other words, the global efforts that a country dedicate to its innovation endeavor appear to positively affect the production of environmental technologies. This is significant especially considering that green patents represent a small portion of the total patenting activity. As also expected, the investment on higher education becomes also a main driver of green innovation. 
+
+On the other hand, a higher relative participation of the business sector in the innovation system hinders the production of green technologies. The model suggests that an increase in 1% in the proportion of the GERD financed by the business sector is associated with a decrease of 0.01% in the production of green patents. This is a very small effect that can be explained by the path-dependence and lock-ins mentioned in the theoretical framework. In short, it might be difficult for some “big players” in the innovation field to move away from their usual research focus on “dirty technologies”, at least as long as the stringency of the environmental policies still allow for strong markets to exist (automobile, machinery, aircraft, mining, etc.).
+
+
+```{r, echo=FALSE, include=FALSE}
+comp_model_1 <- plm(log_gp ~ log_gerd + ter_edu_gdp + gerd_fin_bs + epsi + env_rd_totalrd + reg_quality , data = df2, index = c("Country", "Year"), model = "within")
+
+#summary(comp_model_1)
+
+comp_model_2 <- plm(log_gp ~ log_gerd + log_rd_tt_pt + ter_edu_gdp + gerd_per_hes + gerd_fin_bs + herd_by_business + epsi + green_taxes + env_rd_totalrd + reg_quality + cont_corr, data = df2, index = c("Country", "Year"), model = "within")
+
+#summary(comp_model_2)
+
+# comp_model_3 <- plm(log_gp ~ gerd_gdp + ter_edu_gdp + gerd_fin_bs + epsi + gerd_gdp * epsi, data = df2, index = c("Country", "Year"), model = "within")
+# 
+# summary(comp_model_3)
+# 
+# comp_model_4 <- plm(log_gp ~ log_gerd + log_rd_tt_pt + ter_edu_gdp + gerd_per_hes + gerd_fin_bs + herd_by_business + epsi + green_taxes + env_rd_totalrd + reg_quality + cont_corr + gerd_gdp * epsi * reg_quality, data = df2, index = c("Country", "Year"), model = "within")
+# 
+# summary(comp_model_4)
+
+
+```
+
+```{r, results='asis', echo=FALSE}
+stargazer(comp_model_1, comp_model_2,
+          type = "latex", 
+          title = "Complete specification",
+          model.numbers = FALSE,
+          covariate.labels = c("GERD (log)", "Number of Researchers (log)", "Spending in HE", "GERD performed by HES",
+                               "GERD financed by the BS", "HERD financed by the BS", "EPSI", "Green Taxes", "Green R+D",
+                               "Regulatory Quality", "Control of corruption"),
+          dep.var.labels = c("Green patents (log)"),
+          column.labels = c("(5)", "(6)"),
+          intercept.bottom = FALSE,
+          digits = 2,
+          header = FALSE,
+          no.space = TRUE,
+        #  omit.stat=c("f"),
+          label = "tab:comp-model")
+```
+
+
+In the case of the governance variables, they loose significance in both specifications, which is at odds with the hypothesis presented above. This can have different explanations: it could be that actually governance indicators do not influence the production of green technology; nonetheless, that is contradictory with previous literature that found both control of corruption ([@dincerDoesCorruptionSlow2019; @anokhinEntrepreneurshipInnovationCorruption2009]) and regulatory quality ([@zangDoesGovernanceEfficiency2019]) to be positive indicators of innovation. This thesis differs from those studies in two important aspects: the scope of innovation, since they take the full range of patents and not only the environmental ones; and the scope of units considered. Even if certainly there might be a difference in the effect of governance in the national innovation system and sectoral systems, it is unlikely to explain this divergence. On the other hand, both @zangDoesGovernanceEfficiency2019 and @anokhinEntrepreneurshipInnovationCorruption2009 use a much larger sample of countries, of 117 and 64 countries respectively, while @dincerDoesCorruptionSlow2019 uses the US States as his sample. It could therefore be hypothesized that the indicators chosen were not the most appropriate for the particular sample of this thesis, since because of how they are built, they might not be very appropriate measures of the attribute it intended to capture. For future research, other indicators, like the Corruption Perception Index of Transparency International, could be used as alternative measures of good governance.
+
+Looking at the fit of the model, there is a lot of homogeneity among the two specifications. However, model (6) has a slightly higher R2 and seems the most comprehensive and therefore becomes the preferred model.
+
+## Model with interactions
+
+Since EPSI and GERD have large main effects on the outcome (green patents), I expect a possible interaction between the two (and eventually also with Regulatory Quality). In order to evaluate such interaction, it is necessary to slightly modify the main statistical model, so that
+
+```{=latex}
+\begin{align}
+\begin{aligned}
+GreenPatents_{it} = \beta_0 + \beta_1 CII_{it} + \beta_2 SP_{it} +
+\beta_3 GQ_{it} + \beta_4 CII*SP_{it} + \\
+\beta_5 GQ*SP_{it} + \beta_6 CII*GQ_{it} + \beta_7 CII*SP*GQ_{it} + \alpha_i + \epsilon_{it}
+\end{aligned}
+\end{align}
+```
+
+
+In this equation, the subscript "it" denotes the observation for country
+"i" at time "t", and the variables are defined as follows:
+
+-   GreenPatents: the number of green patents granted in country "i" at
+    time "t"
+
+-   CII: a measure of the quality of a
+    country's innovation infrastructure
+
+-   SP: a measure of a country's sectoral (environmental) policies
+
+-   GQ: a measure of a country's legal and
+    political factors affecting innovation and environmental protection (quality of governance)
+
+-   $\alpha_i$: a fixed effect capturing unobserved country-specific
+heterogeneity
+
+-   $\epsilon_{it}$: the error term for country "i" at time "t"
+
+Table \@(ref:tab:int-model) shows the results of three model specifications with different levels of interactions. Model (7) includes only the three more "representative" indicators of each variable, with interaction between EPSI and GERD (as % of GDP). Model (8) includes the same variables but an additional interaction with Regulatory Quality. Model (9) includes three additional variables: Spending in Higher Education (HE); GERD financed by the Business Sector (BS) and environmental R&D.
+
+
+```{r, echo=FALSE, include=FALSE}
+int_model_1 <- plm(log_gp ~ gerd_gdp + epsi + reg_quality + gerd_gdp*epsi , data = df2, index = c("Country", "Year"), model = "within")
+#summary(int_model_1)
+
+int_model_2 <- plm(log_gp ~ gerd_gdp + epsi + reg_quality + gerd_gdp*epsi*reg_quality , data = df2, index = c("Country", "Year"), model = "within")
+#summary(int_model_1)
+
+int_model_3 <- plm(log_gp ~ gerd_gdp + ter_edu_gdp + gerd_fin_bs + epsi + env_rd_totalrd + reg_quality + gerd_gdp*epsi*reg_quality, data = df2, index = c("Country", "Year"), model = "within")
+#summary(int_model_2)
+
+```
+
+```{r, results='asis', echo=FALSE}
+stargazer(int_model_1, int_model_2, int_model_3,
+          type = "latex", 
+          title = "Specification with interactions",
+          model.numbers = FALSE,
+          covariate.labels = c("GERD (GDP)", "Spending in HE", "GERD financed by the BS", "EPSI",
+                               "Green R+D", "Regulatory Quality (RQ)", "GERD*EPSI", "GERD*RQ", "EPSI*RQ", "GERD*EPSI*RQ"),
+          dep.var.labels = c("Green patents (log)"),
+          column.labels = c("(7)", "(8)", "(9)"),
+          intercept.bottom = FALSE,
+          digits = 2,
+          header = FALSE,
+          no.space = TRUE,
+          df = FALSE,
+          label = "tab:int-model")
+```
+
+Interpreting the results of the interaction in the case of a fixed effects model is not straightforward. Basically 
+"The coefficient on X1 * X2 is the effect of a one-unit increase in X1 and X2, above and beyond the sum of the individual effects of a unit increase in X1 alone and a unit increase in X2 alone" [@stockIntroductionEconometrics2020]. In concrete, a negative sign in the interaction term would imply that the positive relationships between the two variables and the outcome are smaller when the values of the other one is high. 
+
+We can therefore interpret that the negative coefficients in the interaction terms in (7) and (8) mean that the (positive) effect of EPSI on environmental innovation is smaller in countries with very high spending in R&D (and viceversa). This is also consistent with the hypothesis that a very consolidated NIS (represented by a high level on R&D expenditure) can create path dependencies and lock-ins that hinder the effect of environmental policy.
+
+The positive sign of the interaction between the three main variables in (8) suggest that high values on all of them can have a small positive effect on the production on environmental technologies.
+
+In model (9), which includes additional controls, none of the interactions is statistically significant, which is not consistent with the quite strong effect of interaction found in the other models . It also performs worse in terms of fit, explaining only around 40% of the variation in the dependent variable.
+
+In terms of the comparison of the fit of the model with the interaction to one without the interaction, we do not observe a significant increase from the previous specifications without interaction, but model (8) performs slightly better, explaining around half of the variation in the dependent variable.
+
+## Robustness Check
+
+To check the robustness of the results, I first perform a test of the Variance Inflation Factor (VIF) of the two "complete specification" models to test for possible problems of multicollinearity. Tables \@ref(tab:vif-model1) and \@ref(tab:vif-model2) present the results of the test. The rule of thumb is that a VIF greater than 10 indicates a problem of multicolinearity and one of the variables should be dropped. We can observe that in both models, the VIF values fall below 10, which implies that the model does not suffer of serious problems of mutlicolinearity. The highest scores are in Model (6) on control of corruption and regulatory quality, which was expected given the strong association of the two governance indicators. Even if the VIF suggests that it is still possible to include both indicators in the regression, the high value on control of corruption makes (5) a preferred model.
+
+Further, I also include robust standard errors to account for heteroskedasticity Table \@ref(tab:comp-model-rob-se) includes the results of the complete model using robust standard errors. In model (10) the spending in higher education losses significance, but the rest of the elements remain significant at least at the 10% level; with most indicators significant at least at the 5% level. In Model (11), all the covariates remain significant, but Spending in Higher Education and EPSI go from 1% to 5% significance; while Green R&D and GERD financed by Business Sector become significant only at the 10% level. 
+ 
+```{r, echo = FALSE, include=TRUE}
+## VIF
+library(olsrr)
+
+test_1 <- lm(log_gp ~ log_gerd + ter_edu_gdp + gerd_fin_bs + epsi + env_rd_totalrd + reg_quality, data = df2)
+vif_1 <- ols_vif_tol(test_1)
+rownames(vif_1) <- c("GERD(log)", "Spending in HE", "GERD financed by the BS", "EPSI", "Green R+D", "Regulatory Quality")
+vif_1 <- vif_1 %>% select(!Variables)
+
+test_2 <- lm(log_gp ~ log_gerd + log_rd_tt_pt + ter_edu_gdp + gerd_per_hes + gerd_fin_bs + herd_by_business + epsi + green_taxes + env_rd_totalrd + reg_quality + cont_corr, data = df2)
+
+vif_2 <- ols_vif_tol(test_2)
+rownames(vif_2) <- c("GERD(log)", "Number of researchers(log)", "Spending in HE", "GERD performed by the HES", "GERD financed by the BS", "HERD financed by the BS", "EPSI", "Green taxes", "Green R+D", "Regulatory Quality", "Control of corruption")
+vif_2 <- vif_2 %>% select(!Variables)
+```
+
+
+```{r, echo=FALSE}
+kable(vif_1, digits = 2, align = "c", format = "latex", caption = "VIF, Model (5)", label = "vif-model1")
+```
+
+```{r, echo=FALSE}
+kable(vif_2, digits = 2, align = "c", format = "latex", caption = "VIF, Model (6)", label = "vif-model2")
+```
+
+```{r, echo=FALSE, include=FALSE}
+rob_se <- list(sqrt(diag(vcovHC(comp_model_1, type = "HC1"))),
+               sqrt(diag(vcovHC(comp_model_2, type = "HC1")))) #,
+               # sqrt(diag(vcovHC(int_model_1, type = "HC1"))),
+               # sqrt(diag(vcovHC(int_model_2, type = "HC1"))))
+```
+
+
+```{r, results='asis', echo=FALSE}
+stargazer(comp_model_1, comp_model_2, ## comp_model_3, comp_model_4,
+          se = rob_se,
+          type = "latex",
+          title = "Complete specification with robust SE",
+          model.numbers = FALSE,
+          covariate.labels = c("GERD (log)", "Number of Researchers (log)", "Spending in HE", "GERD performed by HES",
+                               "GERD financed by the BS", "HERD financed by the BS", "EPSI", "Green Taxes", "Green R+D",
+                               "Regulatory Quality", "Control of corruption"),
+          dep.var.labels = c("Green patents"),
+          column.labels = c("(10)", "(11)"),
+          intercept.bottom = FALSE,
+          digits = 2,
+          header = FALSE,
+          no.space = TRUE,
+          df = FALSE,
+      #    omit.stat=c("f"),
+          label = "tab:comp-model-rob-se")
+```
+
+Finally, Table \@ref(tab:int-model-rob-se) shows the results of the two models including interactions and robust standard errors to account for heteroskedasticity. The results remain very much the same, except that the triple interaction in model (13) looses significance.
+
+```{r, echo=FALSE, include=FALSE}
+rob_se2 <- list(sqrt(diag(vcovHC(int_model_1, type = "HC1"))),
+               sqrt(diag(vcovHC(int_model_2, type = "HC1"))))
+```
+
+
+```{r, results='asis', echo=FALSE}
+stargazer(int_model_1, int_model_2,
+          se = rob_se2,
+          type = "latex",
+          title = "Specification with interactions and robust SE",
+          model.numbers = FALSE,
+          covariate.labels = c("GERD (GDP)", "EPSI",
+                               "Regulatory Quality", "GERD*EPSI", "GERD*RQ", "EPSI*RQ", "GERD*EPSI*RQ"),
+          dep.var.labels = c("Green patents"),
+          column.labels = c("(12)", "(13)"),
+          intercept.bottom = FALSE,
+          digits = 2,
+          header = FALSE,
+          no.space = TRUE,
+          df = FALSE,
+          label = "tab:int-model-rob-se")
+```

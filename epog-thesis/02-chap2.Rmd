@@ -1,21 +1,16 @@
 # Data and methods
 
-## Environmental Patenting in OECD countries
-
-To measure the drivers of environmental innovation I rely on the NIC
-approach described above, and first introduced by
-@furmanUnderstandingDriversNational2000. However, I use a modified
+To build the empirical strategy I take advantage of the previous work on the NIC approach, both in its original version as introduced by
+@furmanUnderstandingDriversNational2000, but also in the modified
 version, taking insights mainly from
 @andrijauskieneRedevelopingNationalInnovative2021. Those authors
 redevelop the original NIC framework in a broader fashion and apply it
-to European countries. However, their framework is only appropriate for
-the national and not the sectoral or technology-specific fields. In
-particular on environmental technologies, I follow an approach similar
-to that of @moroNationalInnovativeCapacity2019. They also use a modified
+to European countries. However, their framework is only appropriate for the national and not the sectoral or technology-specific fields. 
+
+A previous work that is more similar to this thesis is the paper by @moroNationalInnovativeCapacity2019. They also use a modified
 version of the NIC approach to study the drivers of innovative outputs
-in the water sector in the European Union and China. The main difference
-with this thesis is that the range of technologies included and the
-selected sample.
+in the water sector in the European Union and China. The variables and indicators are not that different from those used in this thesis, however there are distinctions in terms of the range of technologies included in the dependent variable and the
+selected sample of countries.
 
 Empirically, this thesis uses a panel data set of 36 member countries
 from OECD from 2000 to 2020. The study focuses on OECD countries due to
@@ -31,10 +26,13 @@ the sample. Costa Rica and Colombia, now full members of the OECD,
 joined the after the dates of interest of this work, in 2020 and 2021
 respectively, and are thus excluded from the analysis.
 
-The main dependent variable is the number of green patents per million
-inhabitants produced by country. Patents have long been used as a
+## Building the dependent variable: The use of patent statistics
+
+The main dependent variable, that is to say, the outcome that is to be explaines, is the output of environmental innovation in OECD countries. To measure it, I use the number of "green patents" produced by country. By green patents, I understand patents in environmental technologies, as explained below.
+
+Patents have long been used as a
 measure of the output of innovative activity. One of the first to point
-out the advanges of working with patents was
+out the advantages of working with patents was
 @grilichesPatentStatisticsEconomic1990, who mentions that "they are
 available; they are by definition related to inventiveness, and they are
 based on what appears to be an objective and only slowly changing
@@ -44,25 +42,25 @@ which make them specially suited for cross-country comparisons like the
 one carried out in this thesis.
 
 That does not mean that patents come without drawbacks. For instance,
-patents do not cover the full spectrum of the innovative output; they
-mostly do not capture process innovation, and social innovation, for
-instance. Another drawback is that patents do not account for the
+patents do not cover the full spectrum of the innovative output: they do not capture process innovation, or social innovation, just to mention two exaples. Another drawback is that patents do not account for the
 quality of inventions or their diffusion. Indeed, it is known that the
 economic value of patents is very skewed, with a few of them worth a
 lot; and most of them with very low economic value
 [@hascicMeasuringEnvironmentalInnovation2015].
 
 Nonetheless, for the moment there do not seem to be a better indicator
-of output of innovative activity, and therefore I rely on the data
-provided by the green patent database of the OECD to build the dependent
-variable. The count includes four main categories of technologies, i.e.
-environmental management, climate change mitigation, climate change
-adaptation, and sustainable ocean economy.
-Appendix XX shows the patent classes included in the dependent variable.
+of output of innovative activity, and most of the literature rely on patent data to measure innovative output. I follow that approach, taking advantage of the data provided by the green patent database of the OECD to build the dependent
+variable, i.e. the number of environmental patents produced in each OECD country. The count includes four main categories of technologies, i.e. environmental management, climate change mitigation, climate change adaptation, and sustainable ocean economy. The technical information concerning the classes and subclasses included in the dependent variable can be found in @hascicMeasuringEnvironmentalInnovation2015.
 
-It is important to mention that working with patent data has its challenges. Achieving comparability across countries and representativeness  within a country requires familiarity with the way patents work and how patent statistics are collected [@hascicUsePatentStatistics2015]. Especially when dealing with narrow technological fields, the researcher must make methodological decisions regarding what exactly to include in its data. Patents are classified by classes that form technology domains, and family size.
+It is important to mention that working with patent data has its challenges. Achieving comparability across countries and representativeness  within a country requires familiarity with the way patents work and how patent statistics are collected [@hascicUsePatentStatistics2015]. Especially when dealing with narrow technological fields, the researcher must make methodological decisions regarding what exactly to include in its data. 
 
-The family size refers to a collection of patent applications covering the same or similar technical content. The applications in a family are related to each other through priority claims. For this work, I use a "patent family >= 2", meaning that the invention has been claimed in at least two different jurisdiccions. @hascicUsePatentStatistics2015 mentions that “In general, PF2 seems as a suitable compromise between comparability (quality threshold) and practicality (variance), except for very narrow technological fields or small inventor countries – in which case PF1 might be the only option [...] It turns out that for many applications related to environmental technologies, the PF2 restriction (claimed priorities) is particularly suitable in order to achieve the dual purpose of comparability and robustness. The count of claimed priorities (i.e. patent applications deposited at any office world-wide, that have been claimed as priority elsewhere in the world) is a suitable statistic for the purpose of international comparisons because only the priority applications protecting “high-value” invention are counted". Since I will be working a variety of countries in a not-very-narrow technological field, it is reasonable to use PF2. The patent is assigned to a country according to the place of residence of the inventor (as opposed to the nationality, for example). When a patent names inventors residing in different countries, each country is assigned a fractional count of the patent. For instance when a patent is the result of two inventors residing in different countries, each country will be given a count of 0.5, and so on for more countries. This is why the variable takes a continuous instead of discrete value.
+Patents are classified by classes that form technology domains, and by family size. The technology domain refers to the specific area of field under which each patent is classified. A patent can be classified in one or more technology domains. The categorization is usually done using the International Patent Classification (IPC) and the Cooperative Patent Classification (CPC) systems, which are hierarchical systems that classify each patent into a broad field and narrower subfields.
+
+The family size refers to a collection of patent applications covering the same or similar technical content. The applications in a family are related to each other through priority claims. For this work, I use a "patent family >= 2" (PF2), meaning that the invention has been claimed in at least two different jurisdictions. @hascicUsePatentStatistics2015 mentions that “In general, PF2 seems as a suitable compromise between comparability (quality threshold) and practicality (variance) [...] It turns out that for many applications related to environmental technologies, the PF2 restriction (claimed priorities) is particularly suitable in order to achieve the dual purpose of comparability and robustness". Since patent applications are costly, seeking protection in more than one jurisdiction is considered as a good indicator of the "value" of the patent. Since I will be working a variety of countries in a not-very-narrow technological field, it is reasonable to use PF2. 
+
+In terms of the geographical attribution, a patent is assigned to a country according to the place of residence of the inventor (as opposed to the nationality, for example). When a patent names inventors residing in different countries, each country is assigned a fractional count of the patent. For instance when a patent is the result of two inventors residing in different countries, each country will be given a count of 0.5, and so on for more countries. This is why the variable takes a continuous instead of discrete value.
+
+## Mapping the production of environmental innovation in OECD countries
 
 It is common knowledge that the production of technology is general, or at least of patented
 technology is very concentrated in a few countries and regions
@@ -73,23 +71,20 @@ world. Second, there are differences in the patenting propensity of
 firms, given the different regulations and the costs associated to
 patenting in different jurisdictions.
 
-In general, the OECD countries included in this thesis represent
-with some of the world's highest innovative activity and technological
-endowment. Indeed, 17 out the 20 countries that filed more applications in 2020
-were members of the OECD (the other three were China, India and Russia).
-However, patenting activity has shifted in the last decade. China has
+In general, the OECD countries included in this thesis are among the most innovative and technologically
+endowed in the world. Indeed, 17 out the 20 countries that filed more applications in 2020
+were members of the OECD (the other three were China, India and Russia). However, patenting activity has shifted in the last decade. China has
 taken a more important role, both in terms of origin of the patents
 (that is, the country of residency of the fist inventor named in the
-patent filing) and the number of filings in the Chinese patent office
+patent filing) and as destination for patenting i.e. the filings in the Chinese Patent Office
 (CPA), both of which accounted for roughly 50% of the world's patenting
-activity in 2020 [@worldintellectualpropertyorganization.WorldIntellectualProperty2021].
+activity in 2020 [@wordlintellectualpropertyorganizationWorldIntellectualProperty2021].
 
-However, even in that sample the distribution is quite
-skewed, with some countries concentrating most of the production of
-technologies and others with very little patenting activity. Chart \@ref(fig:gp-by-country) shows the patenting activity in
-environmental technologies of the OECD countries from 2000 to 2019. This figure shows that most of the patenting in environmental
-technologies happen in six countries, the United States, Japan, Korea,
-Germany, France and the United Kingdom. Out of those, the United States, Japan, ans in some years Korea, generate on average more patents than the 30 OECD countries with less patenting taken together (Others). We can also see that, in general, there was a sharp increase in the production of green patents since the beginning of the century, and especially since 2005 up until around 2012, when the tendency changes and most countries start decreasing their annual production of green patented technologies. 
+In total OECD-countries inventors filed 670,565 environmental patents from 2000 to 2020, but even there the distribution is quite skewed, with some countries concentrating most of the production of
+technologies and others with very little patenting activity. Figure \@ref(fig:gp-by-country) shows the patenting activity in
+environmental technologies of the OECD countries from 2000 to 2019. This figure shows that most of the patenting in environmental technologies happen in six countries: the United States, Japan, Korea, Germany, France and the United Kingdom. Out of those, the United States, Japan, and in some years Korea, generate on average more patents than the 30 OECD countries with less patenting taken together (the line "Others" in the chart includes the remaining 30 OECD countries). For instance, in 2019, out of the 33,420 patents filled within the OECD, 19,148 (57.2%) were attributed to an inventor residing in one the six countries mentioned above.
+
+We can also see that, in general, there was a sharp increase in the production of green patents since the beginning of the century, and especially since 2005 up until around 2012, when the tendency changes and most countries start decreasing their annual production of green patented technologies. 
 
 ```{r, include FALSE, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -116,6 +111,7 @@ library(vtable)
 library(cowplot)
 library(treemap)
 library(hrbrthemes)
+library(olsrr)
 
 ###################################################################
 
@@ -146,7 +142,9 @@ gp_by_country <- df2 %>%
   geom_line(linewidth = 1.2) +
   geom_line(data = sum_others, aes (x = Year, y = sum, color = Country), linewidth = 1.2) +
   labs(title = "Green patents in OECD countries 2000-2019", y = "Number of green patents", x = "Year") +
-  theme_clean()
+  theme_minimal() +
+  guides(color=guide_legend(nrow=2,byrow=TRUE)) +
+  theme(legend.position = "bottom", legend.box= "horizontal")
 
 ## 2. Green patents per capita
 
@@ -156,7 +154,9 @@ gp_per_capita <- df2 %>%
   geom_line(linewidth = 1.2) +
   labs(title = "Green patents per million population
        in OECD countries 2000-2019", y = "Number of green patents", x = "Year") +
-  theme_clean()
+  theme_minimal() +
+  guides(color=guide_legend(nrow=2,byrow=TRUE)) +
+  theme(legend.position = "bottom", legend.box= "horizontal")
 
 ## 3. Green patents by unit of GDP
 
@@ -166,7 +166,9 @@ gp_per_gdp <- df2 %>%
   ggplot(mapping = aes(x = Year, y = patents_gdp, color = Country)) +
   geom_line(linewidth = 1.2) +
   labs(title = "Green patents per unit of GDP", y = "Number of green patents", x = "Year") +
-  theme_clean()
+  theme_minimal() +
+  guides(color=guide_legend(nrow=2,byrow=TRUE)) +
+  theme(legend.position = "bottom", legend.box= "horizontal", legend.margin = margin())
 
 ```
 
@@ -177,23 +179,21 @@ gp_by_country
 ```
 
 
-Looking a bit further into the six countries that produce more green patents, Fig. \@ref(fig:green-patents-productivity) shows their productivity, measured as number of green patents per million population and per unit of GDP. In both cases, we can see that Korea, Japan and Germany are the countries with the highest productivity. Korea in particular, shifted from the other countries around 2007 and became more productive by an important margin and keeping this advantage until now, even if some decline can be observed in the last years.
+To correctly compare the innovative output of countries, we should take into account the productivity. Figure \@ref(fig:green-patents-productivity) shows the production of green patents per million population in the six countries that produce the greatest number of patents among the OECD. We can see that Korea, Japan and Germany are the countries with the highest productivity. Korea in particular, shifted from the other countries around 2007 and became more productive by an important margin and keeping this advantage until now, even if some decline can be observed in the last years.
 
 
 ```{r green-patents-productivity, echo=FALSE, warning=FALSE}
 #| label: green-patents-productivity
 #| fig-cap: Green patent productivity
 
-grid.arrange(gp_per_capita, gp_per_gdp)
+gp_per_capita
 ```
 
-These environmental patents are not evenly distributed across technology domains.
-Indeed, climate change mitigation technologies account for most of the
-innovation during the whole period of study (59%). As shown in Chart \@ref(fig:green-patents-domain), since 2000, this type of
-technologies increased sharply and only had a declining trend from 2012,
+Just as the production of green technologies is concentrated in some countries, it is also concentrated in some technology areas more than others. Indeed, climate change mitigation technologies account for most of the
+innovation during the whole period of study (59%). As shown in Figure \@ref(fig:green-patents-domain), since 2000, this type of technologies increased sharply and only had a declining trend from 2012,
 but still keeping as the biggest group by a large margin. Environmental
 management technologies also increased particularly from 2003 until
-2010; after that the tendency becomes less consistent but generally
+2010; after that, the tendency becomes less consistent but generally
 downward. In contrast, climate change adaptation and sustainable ocean
 technologies have been quite stable during the whole period, accounting
 for around 8.5% and 2.5% respectively during the two-decade period of analysis.
@@ -219,7 +219,7 @@ gp_by_tech_dom <- gp2 %>% group_by(Year, tech_dom) %>% summarise(sum = sum(Value
     x = "Year",
     y = "NUmber of patents",
     color = "Technology domain") +
-  theme_clean() +
+  theme_minimal() +
   guides(color=guide_legend(nrow=3,byrow=TRUE)) +
   theme(legend.position = "bottom", legend.box= "vertical", legend.margin = margin())
 ```
@@ -230,62 +230,24 @@ gp_by_tech_dom <- gp2 %>% group_by(Year, tech_dom) %>% summarise(sum = sum(Value
 gp_by_tech_dom
 ```
 
-Now let explore the set of independent variables that are included in the model.
+## The drivers of green innovation
 
-## Independent variables
+In this section, I present the data that is used to measure the drivers of environmental innovation. As mentioned before, there are three main variables considered as determinant in shaping the green national innovative capacity: the sectoral policies, moslty environmental policies, that target directly or indirectly the production of environmental technologies; the common innovation infrastructure that includes the institutional framework necessary for innovation in general; and the quality of the governance, that captures the broader institutional setting and the ability of the State to enforce norms and regulations. 
 
-### Environmental Policy
+### Sectoral Policies
 
-I use three indicators to capture the effect of environmental policy on innovation in green technologies: The Environmental Policy Stringency Index (EPSI), the green taxes (as percentage of GDP); and the environmental R&D as a percentage of total R&D expenditure. Those three indicators capture the efforts by public authorities to create the incentives required by firms to engage in innovation in environmental technologies, and therefore, I expect them to contribute positively to national green innovative capacity.
+I use three indicators to capture the effect of sectoral policies on innovation in green technologies: The Environmental Policy Stringency Index (EPSI), the green taxes (as percentage of GDP); and the environmental R&D as a percentage of total R&D expenditure. Those three indicators capture the efforts by public authorities to create the incentives required by firms to engage in innovation in environmental technologies, and therefore, I expect them to contribute positively to national green innovative capacity.
 
-In this section I explain in detail each of those indicators and present some basic statistics about them.
-
-The OECD Environmental Policy Stringency Index (EPSI) used in this thesis is a country-specific and internationally-comparable measure of the stringency of environmental policy. The index is based on the degree of stringency of 13 environmental policy instruments, primarily related to climate and air pollution. The index ranges from 0 (not stringent) to 6 (highest degree of stringency) [@kruseMeasuringEnvironmentalPolicy2022]. Stringency in this context is defined as the degree to which environmental policies put an explicit or implicit price on polluting or environmentally harmful behaviour [@kruseMeasuringEnvironmentalPolicy2022].
+The OECD Environmental Policy Stringency Index (EPSI) is a country-specific and internationally-comparable measure of the stringency of environmental policy. The index is based on the degree of stringency of 13 environmental policy instruments, primarily related to climate and air pollution. The index ranges from 0 (not stringent) to 6 (highest degree of stringency) [@kruseMeasuringEnvironmentalPolicy2022]. Stringency in this context is defined as the degree to which environmental policies put an explicit or implicit price on polluting or environmentally harmful behaviour [@kruseMeasuringEnvironmentalPolicy2022].
 
 Given the comparative nature of this thesis, the EPSI presents an important advantage. Since different countries have different policy mixes to achieve their environmental goals, some relying more on market instruments like taxes, while others focusing on non-market policies like caps and standards. By providing a synthetic tool that is more broad and comprehensive than the comparison of particular polices or policy instruments, EPSI allows for a more precise international comparison.
 
-As of now, the EPSI includes 13 policy instruments, focusing predominantly on climate change and air pollution policies. The general index consists of “three equally-weighted subindices, which respectively group market based (e.g. taxes, permits and certificates), non-market based (e.g. performance standards) and technology support policies. Technology support policies are further divided into upstream (R&D support) and downstream (feed-in tariffs, auctions) technology support measures”. The index ranges from 0 (not stringent) to 6 (highest degree of stringency) [@MeasuringEnvironmentalPolicy2022]. 
+As of now, the EPSI includes 13 policy instruments, focusing predominantly on climate change and air pollution policies. The general index consists of “three equally-weighted subindices, which respectively group market based (e.g. taxes, permits and certificates), non-market based (e.g. performance standards) and technology support policies. Technology support policies are further divided into upstream (R&D support) and downstream (feed-in tariffs, auctions) technology support measures”. The index ranges from 0 (not stringent) to 6 (highest degree of stringency) [@oecdMeasuringEnvironmentalPolicy2022]. 
 
-The main limitation of the EPSI are the instruments that fall outside of its scope. For example, it does not consider policies aimed at reducing emissions from the agricultural sector [@MeasuringEnvironmentalPolicy2022]. That means that countries whose economy rely heavily on agriculture might have developed policies for that particular sector that would not be reflected in the index.
-
-The second indicator, green taxes, is taken from the OECD Green Growth Database. It is expressed as a percentage of total tax revenue, and therefore is an indicator of the intensity of environmental taxes within the context of a country’s tax system. According to the technical documentation from the OECD, “Environmentally related taxes include taxes to (i) energy products for transport purposes (petrol and diesel) and for stationary purposes (fossil fuels and electricity); (ii) motor vehicles and transport (one-off import or sales taxes, recurrent taxes on registration or road use and other transport taxes); (iii) waste management (final disposal, packaging and other waste-related product taxes); (iv) ozone-depleting substances and (v) other environmentally related taxes.” [@oecdGreenGrowthIndicators2017].
-
-Finally, I also include the R&D expenditure in environmental technologies. This indicator is defined as the share public R&D investment dedicated to environmental R&D activities. This indicator possibly suffers a double collinearity problem, since it is included in the general R&D considered under the general innovation infrastructure variable; and also partly considered in the EPSI indicator.
-
-As mentioned before, the EPSI includes some green taxes and R&D expenditure as part of the instrument it considers; therefore it would not be surprising to find a strong correlation between those variables. I am including Green Taxes as a separate variable because of the potential impact that it could have not only in achieving environmental goals, but indirectly, by affecting the prices of “brown” technologies, on sparking innovation on green technologies. This straightforward mechanism is not as clear in the cases of other environmental policies. Same line of reasoning for the inclusion of environmental R&D: the direct impact in environmental innovation though a reduction of the cost of innovation by companies, makes it worth including it at least in a fist stage of the analysis. In the final model specification, I deal with the collinearity problems that might arise.
-
-```{r, include=FALSE}
-
-## EPSI by country in 2020
-
-## By country
-
-epsi_chart <- df2 %>% select(LOCATION, Year, epsi) %>% group_by(LOCATION) %>% filter(!LOCATION %in% c("LVA", "LTU")) %>% summarise(mean = mean(epsi, na.rm = TRUE)) %>% 
-  ggplot() +
-  geom_col(mapping = aes(x = reorder(LOCATION, mean), y = mean)) +
-  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
-  labs(title = "EPSI, average 2000-2020",
-        x = "Country",
-        y = "") +
-  theme_clean() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-
-## By year
-
-epsi_chart2 <- df2 %>% select(Country, Year, epsi) %>% group_by(Year) %>% filter(!Country %in% c("Latvia", "Lithuania")) %>% summarise(mean = mean(epsi, na.rm = TRUE)) %>% 
-  ggplot() +
-  geom_line(mapping = aes(x = Year, y = mean)) +
-  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
-  theme_clean() +
-  labs(title = "EPSI, average OECD",
-       x = "Year",
-       y = "Average OECD",
-       caption = "Note: Data for Latvia and Lithuania not available") 
-```
+The main limitation of the EPSI are the instruments that fall outside of its scope. For example, it does not consider policies aimed at reducing emissions from the agricultural sector [@oecdMeasuringEnvironmentalPolicy2022]. That means that countries whose economy rely heavily on agriculture might have developed policies for that particular sector that would not be reflected in the index.
 
 Figure \@ref(fig:epsi-chart) Panel A shows the evolution of the environmental policy
-stringency in the OECD, as measured by the Environmental Policy
-Stringency Index (EPSI). In it we can see that, on average, there has
+stringency in the OECD, as measured by the EPSI. We can see that, on average, there has
 been an increase in the environmental policy stringency, which is
 consistent with the increased preoccupation for effects of climate change
 and environmental degradation in general. However, it is worth noting
@@ -295,54 +257,58 @@ quite stable with only very minor increases.
 
 On the other hand, Panel B shows the average score of each of the countries in the sample over the period 2000-2020. We can see that there is some heterogeneity between countries, but a majority of them are located in the 2-3 range. The highest scores are, in general, in countries in central and northern Europe (France, Denmark, Sweden), while the lower scores are in the Americas, Asia and Oceania (New Zealand, Israel, Chile, Mexico).
 
+```{r, include=FALSE}
+
+## EPSI by country in 2020
+
+## By country
+
+epsi_chart <- df2 %>% select(LOCATION, Year, epsi) %>% group_by(LOCATION) %>% filter(!LOCATION %in% c("LVA", "LTU")) %>% summarise(mean = mean(epsi, na.rm = TRUE)) %>% 
+  ggplot(fill = LOCATION) +
+  geom_col(mapping = aes(x = reorder(LOCATION, mean), y = mean, fill = "steelblue"), width = 0.5) +
+  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
+  scale_fill_manual(values = "steelblue") +
+  labs(title = "EPSI, average 2000-2020",
+        x = "Country",
+        y = "Mean Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), legend.position = "none")
+
+## By year
+
+epsi_chart2 <- df2 %>% select(Country, Year, epsi) %>% group_by(Year) %>% filter(!Country %in% c("Latvia", "Lithuania")) %>% summarise(mean = mean(epsi, na.rm = TRUE)) %>% 
+  ggplot() +
+  geom_line(mapping = aes(x = Year, y = mean), linewidth = 1.2, color = "steelblue") +
+  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
+  theme_minimal() +
+  labs(title = "EPSI, average OECD",
+       x = "Year",
+       y = "Average OECD",
+       caption = "Note: Data for Latvia and Lithuania not available") 
+```
+
 ```{r epsi-chart, echo=FALSE}
 #| label: epsi-chart
 #| fig-cap: Environmental Policy Stringency Index
 plot_grid(epsi_chart2, epsi_chart, nrow = 2, labels = c("A", "B"))
 ```
 
-```{r env-rd, include=FALSE, echo=FALSE}
-## Environmental R&D
+The second indicator, green taxes, measures the extent to which a country imposes taxation to polluting industries or activities. It is taken from the OECD Green Growth Database and is expressed as a percentage of total tax revenue, and therefore is an indicator of the intensity of environmental taxes within the context of a country’s tax system. According to the technical documentation from the OECD, “Environmentally related taxes include taxes to (i) energy products for transport purposes (petrol and diesel) and for stationary purposes (fossil fuels and electricity); (ii) motor vehicles and transport (one-off import or sales taxes, recurrent taxes on registration or road use and other transport taxes); (iii) waste management (final disposal, packaging and other waste-related product taxes); (iv) ozone-depleting substances and (v) other environmentally related taxes.” [@oecdGreenGrowthIndicators2017].
 
-env_rd <- df2 %>% select(Country, Year, env_rd_totalrd) %>% group_by(Year) %>% summarise(mean = mean(env_rd_totalrd, na.rm = TRUE)) %>% 
-  ggplot() +
-  geom_line(mapping = aes(x = Year, y = mean)) +
-  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
-  labs(
-    title = "Environmental R&D budget",
-    x = "Year",
-    y = "% total government R&D"
-  ) +
-  theme_clean()
+The average tax revenue from green taxes has kept stable in around 2.3% on average during the whole period of analysis, with some downward tendency in the last years: it went from 2.44% in 2016 to 2.1% in 2020. There is some heterogeneity among countries, as shown in Figure \@ref(fig:green-taxes). For most countries (24), the share of green taxes in their total tax revenue is lower in 2020 than it was in 2000.
 
-## Environmental R&D as a % of total R&D has been decreasing in OECD countries
+```{r green-taxes-code, echo=FALSE, include=FALSE}
 
-## By country
-
-env_rd2 <- df2 %>% select(LOCATION, Year, env_rd_totalrd) %>% group_by(LOCATION) %>% summarise(mean = mean(env_rd_totalrd, na.rm = TRUE)) %>% 
-  ggplot() +
-  geom_col(mapping = aes(x = reorder(LOCATION, mean), y = mean)) +
-  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
-  labs(title = "Environmental R&D budgets,
-       average 2000-2020",
-       x = "Country",
-       y = "% total government R&D") +
-  theme_clean() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
-```
-
-```{r green-taxes, echo=FALSE, include=FALSE}
-
-## BY Country
+## By Country
 green_taxes_chart <- df2 %>% select(LOCATION, Year, green_taxes) %>% group_by(LOCATION) %>% 
   filter(!LOCATION %in% c("CAN", "ISR", "KOR")) %>%  summarise(mean = mean(green_taxes, na.rm = TRUE)) %>% 
   ggplot() +
   geom_col(mapping = aes(x = reorder(LOCATION, mean), y = mean)) +
   scale_y_continuous(labels = scales::comma, n.breaks = 5) +
-  theme_clean() +
+  theme_minimal() +
   labs(title = "Environmental taxes, average 2000-2020",
        x = "Country",
-       y = "% of GDP",
+       y = "% total government R&D",
        caption = "Note: Data not available for Canada, Israel and Korea") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
@@ -357,91 +323,340 @@ green_taxes_chart2 <- df2 %>% select(Country, Year, green_taxes) %>% group_by(Ye
   labs(title = "Environmental taxes, OECD average",
        x = "Country",
        y = "% of GDP")
-```
 
-Figure \@ref(fig:env-variables-1), shows the evolution of the two remaining indicators of environmental policy. Panel A shows the average share of environmental R&D budget in the general public R&D. We can see that, quite surprisingly, this share has been decreasing sharply since 2015, with only a minor increase in 2020, that only puts it at the same level it had in 2000. Panel B shows that the environmental taxes as % of GDP. This indicator has been very stable along the study period, at an average of 2.35%. However, there is small decline in the last years, going from an average of 2.44% in 2016 to 2.13% in 2020.
-
-Just as with the EPSI, it is interesting to observe that, even as countries step up their compromises in environmental protection, that is not reflected in the indicators. It looks as if, on the contrary, environmental policy is becoming less stringent and more permissive.
-
-```{r env-variables-1, echo = FALSE, warning=FALSE}
-#| label: env-variables-1
-#| fig-cap: Evolution of environmental indicators by year
-plot_grid(env_rd, green_taxes_chart2, nrow = 2, labels = c("A", "B"))
-```
-
-
-
-```{r env-variables-2, echo=FALSE, warning=FALSE}
-#| label: env-variables-2
-#| fig-cap: Environmental indicators by country
-plot_grid(env_rd2, green_taxes_chart, nrow = 2, labels = c("A", "B"))
-```
-
-### General innovation infrastructure
-
-An important hypothesis of this thesis is that environmental policy can further environmental innovation, but also a strong innovation infrastructure is necessary, even if its effects are more mixed given the rigidities and path-dependences discussed in the theoretical framework.
-
-To asses the general innovation infrastructure, I use a battery of six indicators, all taken from the OECD Main Science and Technology Indicators. The first is the Gross Expenditure in R&D, which measures the total expenditure on R&D from all sources, i.e. Government, business sector and higher education sector. This is the main indicator or innovation input. In a simplistic linear model of innovation [@godinLinearModelInnovation2006] it is the *only* input necessary to foster innovation. In the case of this thesis, I expect a very string positive impact on environmental innovation, but nuanced by the necessary integration of other elements in a systemic perspective.
-
-```{r}
+green_taxes_chart3 <- ggplot(df2, aes(x = LOCATION, y = green_taxes, fill = as.factor(Year), color = as.factor(Year))) +
+  geom_col(data = subset(df2, Year == "2020"), position = "dodge", width = 0.7) +
+  geom_point(data = subset(df2, Year == "2000"), size = 3) +
+  scale_fill_manual(values = c("2020" = "steelblue"), name = "", labels = "2020") +
+  scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
+  labs(x = "Country", y = "% of tax revenue", title = "Green taxes") +
+  theme_minimal() +
+  guides(color = guide_legend(
+    override.aes=list(shape = 16, color = "red", fill = "white")),
+    fill = guide_legend(title = "Year", override.aes=list(shape = 15, color = "steelblue", size = 6))) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        legend.box.background = element_rect(color="white", size=2),
+        legend.key = element_rect(fill = "white", colour = "white"))
 
 ```
 
+```{r, echo=FALSE, warning=FALSE}
+#| label: green-taxes
+#| fig-cap: Environmental taxes as % of total tax revenue
+green_taxes_chart3
+```
 
-The second indicator is the share of R&D personnel per thousand total employment, which measures of the intensity of the human resources dedicated to pursuing activities related to innovation activities. Thirdly, I include the country’s investment in tertiary education as percentage of GDP. The tertiary education has a double effect on innovation: one one side, it trains the engineers and other knowledge professionals that are instrumental for the innovation processes; on the other hand, it is a major source of research, specially in basic science, which underlies many technological advancements and given its (mostly) open nature, can have large positive downstream effects. I also expect a positive impact of both of those indicators on the production of environmental technology.
+Finally, I also include the R&D expenditure in environmental technologies. This indicator is defined as the share public R&D investment dedicated to environmental R&D activities. It is worth noticing that public spending in environmental R&D is not in the "traditional" environmental policy instruments. Nonetheless, I argue that it can be considered as a type of environmental policy, as it involves investing resources to address environmental issues and promote sustainability. As countries increase their ambition in terms of environmental goals, investing in green R&D can become part of a broader strategy to achieve those goals.
 
-Finally, I also include three indicators that are meant to capture the quality of the links between actors within the National Innovation System. The first is the share of GERD performed by the higher education sector; the second, the share of GERD financed by the business sector; and finally the share of higher education R&D financed by the business sector. Those indicators highlight the importance of the main actors in the NIS. I would expect higher links to translate to an increase in the environmental technology producing capacity. 
+Figure \@ref(fig:env-rd), shows the environmental R&D efforts of OECD countries. In panel A we observe the heterogeneity in terms of the relative share of resources dedicated to environmental R&D in OECD countries. New Zealand is the country that dedicates more resources (relative to their total R&D expenditure) to environmental R&D with 12.48%, while Switzerland and the US are the ones that dedicate the less in relative terms. Panel B shows that there was an (relative) increase in R&D budgets until 2007, but a general decrease after that. In 2019, OECD countries dedicated a smaller share of their R&D budgets to environmental R&D as compared to 2000.
 
-However, as mentioned in the theoretical framework, in general I would not be surprised to find a mixed effect of this variable on environmental innovation, with some indicators taken negative values, given that fact that a strong innovation infrastructure is needed for environmental innovation, but it might create path-dependence and lock-ins by innovation system developed on "dirty" technologies that might empower the incumbent stakeholders and hinder the development of new-to-the-world environmental technologies.
+Two main conclusions emerge from the exploration of the data in environmental policies: the first is that countries can (and actually do) chose different policy mixes to achieve their environmental goals. New Zelaland is an example of a country that has very low green taxes, but very high investment in green R&D. The second and perhaps more striking is that, even as countries step up their compromises in environmental protection, that is not reflected in the indicators. On the contrary, environmental stringency is not increasing, and green taxes and environmental R&D are even decreasing.
+
+```{r env-rd-code, include=FALSE, echo=FALSE}
+## Environmental R&D
+
+env_rd <- df2 %>% select(Country, Year, env_rd_totalrd) %>% group_by(Year) %>% summarise(mean = mean(env_rd_totalrd, na.rm = TRUE)) %>% 
+  ggplot() +
+  geom_line(mapping = aes(x = Year, y = mean), linewidth = 1.2, color = "steelblue") +
+  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
+  labs(
+    title = "Environmental R&D budget",
+    x = "Year",
+    y = "% government R&D"
+  ) +
+  theme_minimal()
+
+## Environmental R&D as a % of total R&D has been decreasing in OECD countries
+
+## By country
+
+env_rd2 <- df2 %>% select(LOCATION, Year, env_rd_totalrd) %>% group_by(LOCATION) %>% summarise(mean = mean(env_rd_totalrd, na.rm = TRUE)) %>% 
+  ggplot() +
+  geom_col(mapping = aes(x = reorder(LOCATION, mean), y = mean, fill = "steelblue"), width = 0.5) +
+  scale_y_continuous(labels = scales::comma, n.breaks = 5) +
+  scale_fill_manual(values = "steelblue") +
+  labs(title = "Environmental R&D budgets,
+       average 2000-2020",
+       x = "Country",
+       y = "% government R&D") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "none")
+```
+
+```{r env-rd, echo=FALSE, warning=FALSE}
+#| label: env-rd
+#| fig-cap: Environmental R&D
+plot_grid(env_rd2, env_rd, nrow = 2, labels = c("A", "B"), rel_heights = c(2,2))
+```
+
+### Common innovation infrastructure
+
+One significant proposition put forth in this thesis is that sector-specific policies have the potential to promote environmental innovation. However, it is crucial to have a robust innovation infrastructure in place, even though its impacts need to be properly evaluated and managed to overcome the path-dependencies discussed in the theoretical framework.
+
+To asses the common innovation infrastructure, I use a battery of six indicators, all taken from the OECD Main Science and Technology Indicators. The first is the Gross Expenditure in R&D, which measures the total expenditure on R&D from all sources, i.e. Government, business sector and higher education sector. This is the main indicator or innovation input. In a simplistic linear model of innovation [@godinLinearModelInnovation2006] it is the *only* input necessary to foster innovation. In the case of this thesis, I expect a positive impact on environmental innovation, but nuanced by the necessary integration of other elements in a systemic perspective.
+
+Figure \@ref(fig:gerd1) shows the GERD and GERD per capita of OECD countries in 2000 and 2020. In aggregate terms, the United States is by far the country that invest the most in R&D. In 2020, the US accounted for 44% of the total investment in R&D in OECD countries. However, when including the size of the population, other countries like Israel and Korea reach a very similar level to the US.
+
+```{r, echo=FALSE, include=FALSE}
+## GERD per capita
+
+## By Year
+
+# gerd_chart1 <- df2 %>% 
+#   select(Country, Year, gerd.per.capita) %>% 
+#   group_by(Year) %>% 
+#   summarise(mean = mean(gerd.per.capita, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_line(aes(x = Year, y = mean)) +
+#   labs(title = "GERD per capita, OECD average",
+#        y = "PPP$") +
+#   theme_clean()
+# 
+# ## By country
+# 
+# gerd_chart2 <- df2 %>% 
+#   select(Country, Year, gerd.per.capita) %>% 
+#   group_by(Country) %>% 
+#   summarise(mean = mean(gerd.per.capita, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_col(aes(x = reorder(Country, mean), y = mean)) +
+#   labs(title = "GERD per capita, average 2000-2020",
+#        x = "Country",
+#        y = "PPP$") +
+#   theme_clean() +
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+# 
+# ## By country
+# 
+# gerd_chart3 <- df2 %>% 
+#   select(Country, Year, gerd_ppp) %>% 
+#   group_by(Country) %>% 
+#   summarise(mean = mean(gerd_ppp, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_col(aes(x = reorder(Country, mean), y = mean)) +
+#   scale_y_continuous(labels = scales::comma) +
+#   labs(title = "GERD (2000-2020 average)",
+#        x = "Country",
+#        y = "M PPP$") +
+#   theme_clean() +
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+# 
+# ## Total gerd
+# 
+# gerd_chart4 <- df2 %>% 
+#   select(Country, Year, gerd_ppp) %>% 
+#   group_by(Year) %>% 
+#   summarise(mean = mean(gerd_ppp, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_line(aes(x = Year, y = mean)) +
+#   labs(title = "GERD, OECD average",
+#        y = "PPP$") +
+#   theme_clean()
+
+gerd_chart5 <- ggplot(df2, aes(x = LOCATION, y = gerd_ppp, fill = as.factor(Year), color = as.factor(Year))) +
+  geom_col(data = subset(df2, Year == "2020"), position = "dodge", width = 0.7) +
+  geom_point(data = subset(df2, Year == "2000"), size = 3) +
+  scale_fill_manual(values = c("2020" = "steelblue"), name = "", labels = "2020") +
+  scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
+  scale_y_continuous(labels = scales::comma_format(scale = 1e-3, suffix = "B")) +
+  labs(x = "Country", y = "Billion PPP$", title = "Gross Domestic Spending in R&D (GERD)") +
+  theme_minimal() +
+  guides(color = guide_legend(
+    override.aes=list(shape = 16, color = "red")),
+    fill = guide_legend(title = "Year", override.aes=list(shape = 15, color = "steelblue", size = 6))) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        legend.box.background = element_rect(color="white", size=2),
+        legend.key = element_rect(fill = "white", colour = "black"), legend.position = "none")
+
+gerd_chart6 <- ggplot(df2, aes(x = LOCATION, y = gerd.per.capita, fill = as.factor(Year), color = as.factor(Year))) +
+  geom_col(data = subset(df2, Year == "2020"), position = "dodge", width = 0.7) +
+  geom_point(data = subset(df2, Year == "2000"), size = 3) +
+  scale_fill_manual(values = c("2020" = "steelblue"), name = "", labels = "2020") +
+  scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
+  labs(x = "Country", y = "PPP $", title = "GERD per capita") +
+  theme_minimal() +
+  guides(color = guide_legend(
+    override.aes=list(shape = 16, fill = "white")),
+    fill = guide_legend(title = "Year", override.aes=list(shape = 15, color = "steelblue", size = 6))) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        legend.box.background = element_rect(color="white", size=2),
+        legend.key = element_rect(fill = "white", colour = "white"), legend.position = "bottom")
+
+```
+
+```{r, warning=FALSE, echo=FALSE}
+#| label: gerd1
+#| fig-cap: Gross Domestic Investment in R&D
+plot_grid(gerd_chart5, gerd_chart6, nrow = 2, labels = c("A", "B"), rel_heights = c(1, 1.3))
+```
+
+The second indicator in this category is the share of R&D personnel per thousand total employment, which measures of the intensity of the human resources dedicated to pursuing activities related to innovation. Thirdly, I include the country’s investment in tertiary education as percentage of GDP. The tertiary education has a double effect on innovation: one one side, it trains the engineers and other knowledge professionals that are instrumental for the innovation processes; on the other hand, it is a major source of research, specially in basic science, which underlies many technological advancements and given its (mostly) open nature, can have large positive downstream effects. I also expect a positive impact of both of those indicators on the production of environmental technology.
+
+Figure \@ref(fig:ter-ed-spending) shows the public spending in higher education in OECD countries in 2019 (latest available year) and in 2000. By 2019, OECD countries dedicated an average 1.17% of GDP to public higher education; a slight increase from the 1.09% on average in 2000.
+
+```{r, echo=FALSE, include=FALSE, warning=FALSE}
+## By year
+# tered_spending1 <- df2 %>% 
+#   select(Country, Year, ter_edu_gdp) %>% 
+#   group_by(Year) %>% 
+#   summarise(mean = mean(ter_edu_gdp, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_line(aes(x = Year, y = mean)) +
+#   labs(title = "Public spending in Tertiary Education, OECD average",
+#        y = "% of GDP") +
+#   theme_clean()
+# 
+# ## By Country
+# tered_spending2 <- df2 %>% 
+#   select(Country, Year, ter_edu_gdp) %>% 
+#   group_by(Country) %>% 
+#   summarise(mean = mean(ter_edu_gdp, na.rm = TRUE)) %>% 
+#   ggplot() +
+#   geom_col(aes(x = reorder(Country, mean), y = mean)) +
+#   labs(title = "Public spending in tertiary education, average 2000-2020",
+#        x = "Country",
+#        y = "% of GDP") +
+#   theme_clean() +
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+tered_spending3 <- ggplot(df2, aes(x = LOCATION, y = ter_edu_gdp, fill = as.factor(Year), color = as.factor(Year))) +
+  geom_col(data = subset(df2, Year == "2019"), position = "dodge", width = 0.7) +
+  geom_point(data = subset(df2, Year == "2000"), size = 3) +
+  scale_fill_manual(values = c("2019" = "steelblue"), name = "", labels = "2019") +
+  scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
+  labs(x = "Country", y = "% of GDP", title = "Public spending in Higher Education") +
+  theme_minimal() +
+  guides(color = guide_legend(
+    override.aes=list(shape = 16, fill = "white")),
+    fill = guide_legend(title = "Year", override.aes=list(shape = 15, color = "steelblue", size = 6))) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        legend.box.background = element_rect(color="white", size=2),
+        legend.key = element_rect(fill = "white", color = "white"))
+```
+
+
+```{r ter-ed-spending, echo = FALSE, warning=FALSE}
+#| label: ter-ed-spending
+#| fig-cap: Public spending in Higher Education (% of GDP)
+tered_spending3
+```
+
+Finally, I also include three indicators that are meant to capture the quality of the links between actors within the National Innovation System. The first is the share of GERD performed by the higher education sector (HES). The HES is instrumental in carrying out R&D activities, especially in basic science. This indicator reveals the relative participation of the HES of each country in the National System of Innovation. As shown in Figure \@ref(fig:rd-chart), on average, 27% of the total R&D investment is performed by the HES.
+
+The second is the share of GERD financed by the business sector (BS), which shows to what extent the business sector participates in the National Innovation System. This figure reaches an average 49.1% in OECD countries, which is relatively high considering the externalities and the appropriation difficulties that those activities generally involve.
+
+Finally, I also include the share of higher education R&D financed by the business sector. This indicator captures the links between two of the main actors of the National Innovation System, the business sector (that in general has the capital to invest); and the Higher Education Sector, that has the expertise to carry out R&D activities. As Figure \@ref(fig:rd-chart) shows, this links are not too high: on average it only adds up to 6.11%.
+
+In general the three indicators highlight the importance of the main actors in the NIS, and how they interact with the system itself and with each other. I would expect higher links to translate to an increase in the environmental technology producing capacity. 
+
+However, as mentioned in the theoretical framework, in general I would not be surprised to find a mixed effect of this variable on environmental innovation, with some indicators taking negative values, given that fact that a strong innovation infrastructure is needed for environmental innovation, but it might create path-dependence and lock-ins by innovation system developed on "dirty" technologies that might empower the incumbent stakeholders and hinder the development of new-to-the-world environmental technologies. 
 
 
 ```{r innovation-infrastructure-code, echo=FALSE, include=FALSE}
-rd_chart <- df2 %>%
+# rd_chart <- df2 %>%
+#   select(LOCATION, Year, gerd_gdp, gerd_per_hes, gerd_fin_bs, herd_by_business) %>%
+#   group_by(Year) %>%
+#   summarise(
+#     mean_gerd_per_hes = mean(gerd_per_hes, na.rm = TRUE),
+#     mean_gerd_fin_bs = mean(gerd_fin_bs, na.rm = TRUE),
+#     mean_herd_by_business = mean(herd_by_business, na.rm = TRUE)
+#   ) %>%
+#   ggplot(aes(x = Year)) +
+#   geom_line(aes(y = mean_gerd_fin_bs, color = "GERD Financed by Business Sector")) +
+#   geom_line(aes(y = mean_gerd_per_hes, color = "GERD Performed by Higher Education Sector")) +
+#   geom_line(aes(y = mean_herd_by_business, color = "HERD Performed by Business Sector")) +
+#   labs(
+#     x = "Year",
+#     y = "Mean Value (%)",
+#     color = "Indicator"
+#   ) +
+#   scale_color_manual(
+#     values = c("red", "blue", "steelblue"),
+#     labels = c("GERD Financed by Business Sector", "GERD Performed by HES", "HERD Performed by Business Sector")
+#   ) +
+#   theme_clean() +
+#   guides(color=guide_legend(nrow=2,byrow=TRUE)) +
+#   theme(legend.position = "bottom", legend.box= "vertical", legend.margin = margin())
+
+########### The chart I actually used
+
+ df_long <- df2 %>%
   select(LOCATION, Year, gerd_gdp, gerd_per_hes, gerd_fin_bs, herd_by_business) %>%
-  group_by(Year) %>%
-  summarise(
-    mean_gerd_per_hes = mean(gerd_per_hes, na.rm = TRUE),
-    mean_gerd_fin_bs = mean(gerd_fin_bs, na.rm = TRUE),
-    mean_herd_by_business = mean(herd_by_business, na.rm = TRUE)
-  ) %>%
-  ggplot(aes(x = Year)) +
-  geom_line(aes(y = mean_gerd_fin_bs, color = "GERD Financed by Business Sector")) +
-  geom_line(aes(y = mean_gerd_per_hes, color = "GERD Performed by Higher Education Sector")) +
-  geom_line(aes(y = mean_herd_by_business, color = "HERD Performed by Business Sector")) +
-  labs(
-    x = "Year",
-    y = "Mean Value (%)",
-    color = "Indicator"
-  ) +
-  scale_color_manual(
-    values = c("red", "blue", "steelblue"),
-    labels = c("GERD Financed by Business Sector", "GERD Performed by HES", "HERD Performed by Business Sector")
-  ) +
-  theme_clean() +
-  guides(color=guide_legend(nrow=2,byrow=TRUE)) +
-  theme(legend.position = "bottom", legend.box= "vertical", legend.margin = margin())
+  pivot_longer(cols = c(gerd_per_hes, gerd_fin_bs, herd_by_business), names_to = "Variable", values_to = "Value")
+
+rd_chart2 <- ggplot(df_long, aes(x = LOCATION, y = Value, fill = Variable)) +
+  geom_col(position = "dodge") +
+  labs(x = "Country", y= "Value", fill = "Variable") +
+  scale_fill_brewer(palette="Paired", labels = c("GERD financed by BS", "GERD performed by HES", "HERD financed by BS")) +
+  labs(y = "Percentage", title = "Quality of linkages within the NIS") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "bottom")
 ```
 
-```{r rd-chart, echo=FALSE}
+```{r rd-chart, echo=FALSE, warning=FALSE}
 #| label: rd-chart
 #| fig-cap: Quality of linkages
-rd_chart
+rd_chart2
 ```
 
 
 ### Governance Indicators
 
-An important addition of this thesis to previous literature on environmental innovation is to include a variable on governance, that is, how the legal and political system affects the innovation system and therefore the production of environmental technologies. Measuring governance is a very challenging task in itself, since there are different ways to understand this concept by they all coincide in considering it a multidimensional and complex concept, composed of a multiplicity of elements that interact with each other. Therefore, and there is not any indicator that by itself can be used to measure it accurately. To my knowledge, the most developed effort to create index indicators that are consistent across time and comparable across countries, if the Worldwide Governance Indicators database curated by the World Bank. This database contains indicators for six dimensions: Voice and Accountability; Political Stability and Absence of Violence/Terrorism; Government Effectiveness; Regulatory Quality; Rule of Law; and Control of Corruption.
+An important addition of this thesis to previous literature on environmental innovation is to include a variable on governance, that is, how the legal and political system affects the innovation system and therefore the production of environmental technologies. Measuring governance is a very challenging task, since there are different ways to understand this concept. Most definitions coincide in considering it a multidimensional and complex concept, composed of a multiplicity of elements that interact with each other. Therefore, and there is not any indicator that by itself can be used to measure it accurately. To my knowledge, the most developed effort to create index indicators that are consistent across time and comparable across countries, if the Worldwide Governance Indicators database curated by the World Bank. This database contains indicators for six dimensions: Voice and Accountability; Political Stability and Absence of Violence/Terrorism; Government Effectiveness; Regulatory Quality; Rule of Law; and Control of Corruption.
 
-Table \@ref(tab: XXX) summarizes the definition of each of those indicators.
+Table \@ref(tab:gov-ind) summarizes the definition of each of those indicators.
 
-```{latex}
-#### Table with indicators definitions
+```{=latex}
+
+\begin{table}
+\centering
+\caption{Quality of Governance Indicators}
+\label{tab:gov-ind}
+\begin{tabular}{>{\centering\hspace{0pt}}m{0.248\linewidth}>{\centering\hspace{0pt}}m{0.148\linewidth}>{\centering\arraybackslash\hspace{0pt}}m{0.546\linewidth}} \hline
+\textbf{ Group } & \textbf{ Name } & \textbf{ Definition } \\ \hline\hline
+The process by
+  which governments are selected, monitored and replaced & Voice and
+  Accountability (VA) & Capturing perceptions
+  of the extent to which a country's citizens are able to participate in selecting
+  their government, as well as freedom of expression, freedom of association, and
+  a free media. \\ \cline{2-3}
+ & Political
+  Stability and Absence of Violence / Terrorism (PV) & Capturing
+  perceptions of the likelihood that the government will be destabilized or
+  overthrown by unconstitutional or violent means, including politically
+  motivated violence and terrorism. \\ \hline
+The capacity of
+  the government to effectively formulate and implement sound policies & Government
+  Effectiveness (GE) & Capturing perceptions
+  of the quality of public services, the quality of the civil service and the degree
+  of its independence from political pressures, the quality of policy formulation
+  and implementation, and the credibility of the government's commitment to such
+  policies. \\ \cline{2-3}
+ & Regulatory
+  Quality (RQ) & Capturing perceptions
+  of the ability of the government to formulate and implement sound policies and
+  regulations that permit and promote private sector development. \\ \hline
+The respect of citizens
+  and the State for the institutions that govern economic and social interactions
+  among them & Rule of Law
+  (RL) & Capturing perceptions
+  of the extent to which agents have confidence in and abide by the rules of society,
+  and in particular the quality of contract enforcement, property rights, the police,
+  and the courts, as well as the likelihood of crime and violence. \\ \cline{2-3}
+ & Control of
+  corruption (CC) & Capturing perceptions
+  of the extent to which public power is exercised for private gain, including both
+  petty and grand forms of corruption, as well as "capture" of the state
+  by elites and private interests. \\ \hline
+\multicolumn{3}{>{\RaggedLeft\hspace{0pt}}m{0.942\linewidth}}{\textit{Source: Own elaboration based on Kaufmann, Kraay, Mastruzzi (2010)}}
+\end{tabular}
+\end{table}
 ```
 
-@kaufmannWorldwideGovernanceIndicators2010 report the aggregate measures in two ways: “in the standard normal units of the governance indicator, ranging from around ‐2.5 to 2.5, and in percentile rank terms ranging from 0 (lowest) to 100 (highest) among all countries worldwide”. For this thesis I consider only the “standard normal units” of each indicator; I also drop the margins of error, a very interesting feature of the dataset, that unfortunately cannot be properly incorporated in a regression model.
 
-It is worth noting that OECD countries included in this study, by definition, share some characteristics of their economic and political systems. This observation means that it may be expected that most of the countries included will be relatively high in their scores, which implies that variability might be low. Chart \@ref(fig:oecd-comp-chart) confirms that observation. It shows that for 2020, on average, on the six indicators OECD countries reach positive scores, while non-OECD are on average on the negative side, with the highest differences between the two groups in control of corruption, government effectiveness, regulatory quality and rule of law. Additionally, since all six indicators are dimensions of the same conceptual construct (governance), they tend to be strongly positively correlated across countries [@kaufmannWorldwideGovernanceIndicators2010]. This strong correlation might cause problems of multicolinearity in a regression context.
+In the paper that describes the methodology for the governance indicators, @kaufmannWorldwideGovernanceIndicators2010 mention that they report the aggregate measures in two ways: “in the standard normal units of the governance indicator, ranging from around ‐2.5 to 2.5, and in percentile rank terms ranging from 0 (lowest) to 100 (highest) among all countries worldwide”. For this thesis I consider only the “standard normal units” of each indicator; I also drop the margins of error, a very interesting feature of the dataset, that unfortunately cannot be properly incorporated in a regression model.
+
+It is worth noting that OECD countries included in this study, by definition, share some characteristics of their economic and political systems. This observation means that it may be expected that most of the countries included will be relatively high in their scores, which implies that variability might be low. Figure \@ref(fig:oecd-comp-chart) confirms that observation. It shows that for 2020, on average, on the six indicators OECD countries reach positive scores, while non-OECD are on average on the negative side, with the highest differences between the two groups in control of corruption, government effectiveness, regulatory quality and rule of law. Additionally, since all six indicators are dimensions of the same conceptual construct (governance), they tend to be strongly positively correlated across countries [@kaufmannWorldwideGovernanceIndicators2010]. This strong correlation might cause problems of multicolinearity in a regression context.
 
 ```{r oecd-comparison, echo=FALSE, include=FALSE}
 ## Comparison of OECD and non-OECD countries
@@ -473,11 +688,11 @@ oecd_comp <- gov %>% group_by(series) %>%
   scale_x_discrete(labels = c("Control Corruption", "Government Effectiveness", "Political Stability", 
                               "Regulatory Quality", "Rule of Law", "Voice and Accountability")) +
   guides(fill=guide_legend(title="OECD")) +
-  theme_clean() +
+  theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-```{r oecd-comp-chart}
+```{r oecd-comp-chart, echo=FALSE}
 #| label: oecd-comp-chart
 #| fig-cap: Governance variables in OECD and non-OECD countries
 
@@ -486,66 +701,51 @@ oecd_comp
 
 In light of that, I decided to focus on the enforcement capacity, and therefore drop the two indicators in the fist category that refers to “the process by which governments are selected, monitored and replaced”, which is not very much related to the innovation processes. Out of the two other categories, following previous literature ([@zangDoesGovernanceEfficiency2019, @dincerDoesCorruptionSlow2019, @andrijauskieneRedevelopingNationalInnovative2021]), and in order to avoid including many highly correlated indicators, I choose one of each group: quality of regulation for “the capacity of the government to effectively formulate and implement sound policies”, and control of corruption for “the respect of citizens and the State for the institutions that govern economic and social interactions among them”.
 
+I expect low corruption to be positively associated to green national innovative capacity, since it implies that public officials are less prone to be pressured by the incumbent firms to maintain the status quo; and could engage in bolder
+policies to support the environmental transition. I also expect better regulation to be associated positively to green national innovative capacity given the previous literature on the topic [@zangDoesGovernanceEfficiency2019] and the fact that policy, including environmental policy, requires a strong Government to enforce it. Weak public sectors can lead to low-quality regulations that are not well-designed and therefore become ineffective, or simply there might not be in place adequate mechanisms for enforcement.
+
 Figure \@ref(fig:gov-vars) shows the change in the values of those two variables in all OECD countries from 2000 to 2020. We can see that with very few exceptions they reach positive scores, and that those scores have not changed dramatically in the last two decades, but there has been a small average decline in the control of corruption indicator, with the average score going from 1.28 to 1.19; while in regulatory quality there has been a slight increase, from 1.18 in 2000, to 1.23 in 2020.
 
 ```{r, echo=FALSE, include=FALSE}
 ## Charts comparing 2000 with 2020
 
 cont_corr_chart <- ggplot(df2, aes(x = LOCATION, y = cont_corr, fill = as.factor(Year), color = as.factor(Year))) +
-  geom_col(data = subset(df2, Year == "2020"), position = "dodge", alpha = 0.5) +
+  geom_col(data = subset(df2, Year == "2020"), position = "dodge", width = 0.7) +
   geom_point(data = subset(df2, Year == "2000"), size = 3) +
   scale_fill_manual(values = c("2020" = "steelblue"), name = "Year", labels = "2020") +
   scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
   labs(x = "Country", y = "Values", title = "Control of corruption") +
-  theme_clean() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "none")
 
 reg_quality_chart <- ggplot(df2, aes(x = LOCATION, y = reg_quality, fill = as.factor(Year), color = as.factor(Year))) +
-  geom_col(data = subset(df2, Year == "2020"), position = "dodge", alpha = 0.5) +
+  geom_col(data = subset(df2, Year == "2020"), position = "dodge", width = 0.7) +
   geom_point(data = subset(df2, Year == "2000"), size = 3) +
   scale_fill_manual(values = c("2020" = "steelblue"), name = "Year", labels = "2020") +
   scale_color_manual(values = c("2000" = "red"), name = "", labels = "2000") +
   labs(x = "Country", y = "Values", title = "Regulatory Quality") +
-  theme_clean() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme_minimal() +
+  guides(color = guide_legend(
+    override.aes=list(shape = 16, fill = "white")),
+    fill = guide_legend(title = "Year", override.aes=list(shape = 15, color = "steelblue", size = 6))) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        legend.box.background = element_rect(color="white", size=2),
+        legend.key = element_rect(fill = "white", colour = "white"), legend.position = "bottom")
 
-legend1 <- get_legend(cont_corr_chart +
-    theme(legend.position = "bottom"))
 ```
 
-```{r gov-vars}
+
+```{r gov-vars, echo=FALSE}
 #| label: gov-vars
 #| fig-cap: Governance variables (2000-2020 comparison)
-plot_grid(cont_corr_chart + theme(legend.position="none"), 
-          reg_quality_chart + theme(legend.position="none"),
-          legend1,
-          nrow = 3,
-          rel_heights = c(1.2, 1.2, .25)
-          )
+plot_grid(cont_corr_chart, reg_quality_chart, nrow = 2, rel_heights = c(1, 1.3))
 ```
 
 
-Finally, to asses the legal and political environment I use the World
-Bank Governance Indicators, in particular quality of regulation and
-perception of corruption. These indicators capture the legal, social and
-political conditions that form the "environment" in which the green
-innovation system has to function. I expect low corruption to be
-positively associated to green national innovative capacity, since it
-implies that public officials are less prone to be pressured by the
-incumbent firms to maintain the status quo; and could engage in bolder
-policies to support the environmental transition. I also expect better
-regulation to be associated positively to green national innovative
-capacity given the previous literature on the topic
-[@zangDoesGovernanceEfficiency2019] and the fact that policy, including
-environmental policy, requires a strong Government to enforce them. Weak
-public sectors can lead to low-quality regulations that are not
-well-designed and therefore become ineffective, or simply there might
-not be in place adequate mechanisms for enforcement.
+For more abundance, Appendix A shows the full list of variables with their respective
+operational definition and source, while Table 2.2 below, shows the descriptive statics of all the quantitative variables.
 
-For more abundance, table **XX** (Appendix) shows the full list of variables with their respective
-operational definition and source. Table \@ref(tab:descriptive-stats) shows the descriptive statics of all the variables.
-
-```{r descriptive-statistics-code}
+```{r descriptive-statistics-code, echo=FALSE, include=FALSE}
 df4 <- df2 %>% select(
   Country, Year,
   green_patents, gp_mill,
@@ -561,8 +761,8 @@ descriptive_stats <- as.data.frame(df4) %>% select(
 ```
 
 
-```{r descriptive-stats, results='asis', echo=FALSE}
-#| label: descriptive-stats
+```{r, results='asis', echo=FALSE}
+#| label: tab:descriptive-stats
 #| tab-cap: Summary statistics
 sumtable(descriptive_stats, 
          labels = c("Green patents", "Green patents per million population", "GERD (PPP USD)", "R+D personnel per thousand labour force", "Public spending in tertiary education as % of GDP", "Share of GERD performed by the HES", "Share of GERD financed by the Business Sector", "Stock of green patents", "EPSI", "Green taxes as % of total tax revenue", "Environmental R+D as % of total R+D", "Regulatory Quality", "Control of corruption"), fit.page = '\\textwidth', out = "latex", title = "Descriptive Statistics")
@@ -571,16 +771,16 @@ sumtable(descriptive_stats,
 
 ## The model
 
-The econometric model used in this study is a panel data fixed effects
-model. This model accounts for both within-country and between-country
-variation and controls for unobserved heterogeneity. The model is
-specified as follows:
+Given the elements outlined above, and the nature of the data, I build an fixed-effects econometric model with the number of green patents as the main outcome and the three independent variables explained _supra_. Formally, the model be specified as follows:
 
-$$ 
-GreenPatents_{it} = \beta_0 + \beta_1 NII_{it} + 
-\beta_2 EP_{it} +
-\beta_3 LPF_{it} + \alpha_i + \epsilon_{it}
-$$ 
+```{=latex}
+\begin{align}
+\begin{aligned}
+GreenPatents_{it} = \beta_0 + \beta_1 CII_{it} + \beta_2 SP_{it} +
+\beta_3 GQ_{it} + \beta_4 CII*SP_{it} + \alpha_i + \epsilon_{it}
+\end{aligned}
+\end{align}
+```
 
 In this equation, the subscript "it" denotes the observation for country
 "i" at time "t", and the variables are defined as follows:
@@ -588,15 +788,25 @@ In this equation, the subscript "it" denotes the observation for country
 -   GreenPatents: the number of green patents granted in country "i" at
     time "t"
 
--   NII: a measure of the quality of a
-    country's innovation infrastructure
+-   CII: a measure of the quality of a
+    country's common innovation infrastructure
 
--   EP: a measure of a country's environmental policies
+-   SP: a measure of a country's sectoral (environmental) policies
 
--   LPP: a measure of a country's legal and
-    political factors affecting innovation and environmental protection
+-   GQ: a measure of a country's legal and
+    political factors affecting innovation and environmental protection (quality of governance)
 
 -   $\alpha_i$: a fixed effect capturing unobserved country-specific
 heterogeneity
 
 -   $\epsilon_{it}$: the error term for country "i" at time "t"
+
+When working with panel data, two main possibilities emerge: to use a fixed effects or a random effects model. The fixed effects model for panel data allows the researcher to "control for all stable characteristics of the individuals in the study, thereby eliminating potentially large sources of bias" [@allisonFixedEffectsRegression2009]. In a fixed effects model, unobserved variables are allowed to be correlated with the observed variables.
+
+On the other hand, in a random effects model, "the unobserved variables are assumed to be uncorrelated with (or, more strongly, statistically independent of) all the observed variables.” [@allisonFixedEffectsRegression2009]. As a consequence, according to @baltagiEconometricAnalysisPanel2021 the random effects model is appropriate for cases "when we are drawing N individuals randomly from a large population. This is usually the case for household panel studies." 
+
+Because of the nature of the dataset used in this thesis, it looks like a fixed effects model is more appropriate. The assumption of conditional independence of means of the regressors with the error term is very taxing and do not seem to apply to this data.
+
+One common way to decide on the kind of model to use, is to perform a Hausman test.  which tests the null hypothesis of the random effects model against the alternative fixed effects model.  In this case, the null hypothesis is that the preferred model is random effects vs. the alternative the fixed effects [@allisonFixedEffectsRegression2009].
+
+In the next section, I present the results of the model using both fixed and random effects, and present the results of the Hausman test to complement the intuitions presented here, in the process of finding the model that best fits the data.

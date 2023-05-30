@@ -8,8 +8,10 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 # National Systems of Innovation: A theoretical framework for innovation in general
 
-Neoclassical theory do not offer a satisfactory explanation for
-innovation in general but specially for radical innovation of the kind
+This section presents the main conceptual and theoretical elements that inform this thesis. The main aim is to offer a solid and coherent framework to understand innovation in general, first, and then adapt it to the specificities of environmental innovation. The concept of National Innovation System and National Innovative Capacity will be central to that construction.
+
+Indeed, the neoclassical theory do not offer a satisfactory explanation for
+innovation in general but it is especially inadequate to account for radical innovation of the kind
 that is necessary for the environmental transition
 [@renningsRedefiningInnovationEcoinnovation2000]. In sight of that, this
 thesis will build on the literature on evolutionary economics of
@@ -29,6 +31,8 @@ and Joseph Schumpeter [@schumpeterCapitalismSocialismDemocracy1994;
 framework was later developed, among others, by
 @nelsonEvolutionaryTheoryEconomic1982 and
 @dosiIntroductionEvolutionaryTheories1994.
+
+The main difference between the traditional "textbook" economics and the evolutionary approaches is the conviction of the last that it is change, instead of equilibrium what define modern capitalist economies. That change is brought about mostly by the force of innovation, and therefore a lot of effort has been dedicated to understanding and conceptualizing those innovation processes [@nelsonModernEvolutionaryEconomics2018a].
 
 One conceptual development derived from the premises set forth by the
 evolutionist perspective in economics is the National Innovation Systems
@@ -59,24 +63,13 @@ In line with this conception and with the basic principles of
 evolutionary economics, the NIS framework is based on a dynamic and
 systematic conception of the innovation process. In contrast with the
 linear model of innovation in which R&D investments mechanically convert
-into innovative outputs, in the NIS framework it ts interactions of the
+into innovative outputs, in the NIS framework it is the interactions of the
 different actors and the institutions that shape those interactions,
-that determine the outcomes of the innovation efforts. Thus, it is an
-holistic approach in which "the notion of non-linear and
-multidisciplinary innovation processes, and interaction on the
-organizational level as well as the interplay between organizations and
-institutions are given central interest"
-[@balzatRecentTrendsResearch2004]. This holistic perspective "allows for
-the inclusion not only of economic factors influencing innovation but
-also of institutional, organizational, social, and political factors"
-[@edquistSystemsInnovationApproaches1997]. In the same line,
-@mckelveyUsingEvolutionaryTheory1997 point out that "seeing innovation
-as a collective learning and selection process means it is necessary to
-move beyond an analysis of each specific individual innovation and
-instead examine collective learning and aggregate patterns of innovative
-activities, both processes and outcomes.".
+that determine the outcomes of the innovation efforts. 
 
-There is not a single definition of a National Innovation System. For
+According to @balzatRecentTrendsResearch2004, the systems-of-innovation approach is holistic, encompassing non-linear and multidisciplinary innovation processes, as well as the interaction between organizations and institutions. This perspective allows for the inclusion of economic, institutional, organizational, social, and political factors that influence innovation [@edquistSystemsInnovationApproaches1997]. @mckelveyUsingEvolutionaryTheory1997 also emphasizes the importance of collective learning and selection processes in innovation, rather than analyzing individual innovations. Therefore, the systems-of-innovation approach takes a comprehensive and interdisciplinary view, accounting for various factors that influence innovation processes and outcomes.
+
+With those elements, it is possible to try to conceptually pinpoint the National System of Innovation. However, it is necessary to say in advance that there is not a single definition. For
 instance @balzatRecentTrendsResearch2004 defines it as "a historically
 grown subsystem of the national economy in which various organizations
 and institutions interact with and influence one another in the carrying
@@ -92,7 +85,7 @@ one or a number of technological  innovations [within  a  framework 
 of]  institutions...  which promote or facilitate the diffusion or
 application of these technological innovations [...]".
 
-The NIS has been criticized for being too vague
+Those definitions and the NIS approach in general has not been lacking criticism. Its conceptual base has been criticized for being too vague
 [@edquistSmallCountryInnovation2008]. However, for
 @lundvallNationalInnovationSystems2007a, the relative vagueness of the
 NIS concept allows it to serve as a "focusing device", that helps to
@@ -102,7 +95,9 @@ for a broad conception of the NIS and considers unnecessary to embark in
 a theorizing effort. @edquistSmallCountryInnovation2008 on the other
 hand, argue that "there is therefore a need for theoretically based
 empirical research to 'straighten up' the approach and make it more
-'theory-like'". In this thesis, I take a broad understanding of the NIS,
+'theory-like'". 
+
+For the effects of this thesis, I take a broad understanding of the NIS,
 in the sense of including not only the more traditional elements (firms,
 Universities, research centres, and their interactions), but also social
 and political factors. In this sense, the NIS is more a focusing device
@@ -110,7 +105,7 @@ in the conception of @lundvallNationalInnovationSystems2007a, than a
 fully-developed theory as proposed by
 @edquistSmallCountryInnovation2008.
 
-In this thesis I will understand a system as constituted by a number of
+I will understand a system as constituted by a number of
 elements and by the relationships between these elements, which give
 rise to emergent properties, i.e. the whole is grater than the sum of
 the individual parts. Therefore, I assume
@@ -144,8 +139,8 @@ momentum in international trade and value chains
 It should also be stresses that several approaches have been developed
 that take the systemic nature of innovation and apply it to systems
 other than the nation-state. The regional innovation systems and the
-sectoral innovation systems are two instances of those developments. The
-main concepts remain the same, but the application is restricted to
+sectoral innovation systems are two instances of those developments the, in which the
+main concepts are the same, but the application is restricted to
 different "units of analysis". These approaches complement rather
 exclude each other [@edquistSystemsInnovationTechnologies1997]. In this
 thesis, I combine the national and sectoral approaches. The unit of
@@ -162,10 +157,10 @@ Schumpeterian way, as "the commercial realization or introduction of a
 new product, process or system in the economy"
 [@freemanTechnologicalInfrastructureInternational2004] or simply as "new
 combinations" [@lundvallNationalInnovationSystems2007a]. In any case,
-innovation is considered as the product of complex processes n which
+innovation is considered as the product of complex processes in which
 firms play the most important role, but are constrained by the
 institutional setting, and by their relations with each other and with
-the environment. According @edquistSystemsInnovationTechnologies1997,
+the environment. According to @edquistSystemsInnovationTechnologies1997,
 innovation processes are "characterized by complicated feedback
 mechanisms and interactive relations involving science, technology,
 learning, production, policy, and demand". In a complex system,
@@ -177,19 +172,20 @@ by firms that can produce alternative technological solution, creating
 variety. Selective pressures will then will make some of those
 alternatives "survive", while other will not. Surviving technologies
 become incumbents and might generate path dependencies and
-(technological and institutional) lock-ins. By
-@nelsonBringingInstitutionsEvolutionary2002 account "At any given period
+(technological and institutional) lock-ins. According to
+@nelsonBringingInstitutionsEvolutionary2002 "At any given period
 of time, many of the routines are largely common to firms in the same
 line of business, but some are not, and these latter, therefore, provide
 the stuff that determines how firms do relative to their competitors".
 
-@nelsonBringingInstitutionsEvolutionary2002 considers that the notion of
+@nelsonBringingInstitutionsEvolutionary2002 further considers that the notion of
 a national or sectoral innovation system is "an institutional concept
 par excellence". This is relevant in the context of this thesis since
 the main determinants of environmental innovation are assumed to be
 institutional, in the form of a complex and not additive relation
-between innovation infrastructure, environmental policy, and legal and
-political strength. However, there is theoretical caveat, since
+between common innovation infrastructure, sectoral (environmental) policies, and quality of governance. 
+
+Nonetheless, there is theoretical caveat: since
 institutions, by their own nature, tend to create stability and inertial
 forces, which could collide with the change (sometimes abrupt) that
 innovation brings to the system. In particular, it is possible that
@@ -202,13 +198,10 @@ introducing innovation into organizations
 [@venturaRoleInstitutionsAchieving2020]. Therefore it is necessary to
 recognize that institutions may have mixed effects on innovation, and
 the balance may depend upon other variables and change with time
-[@edquistSystemsInnovationTechnologies1997]. In this thesis, we try to
-identify the institutional settings that favors innovation of
-environmental technologies, which require, as discussed later, to break
-the path-dependence of fossil fuel and other "dirty" technologies.
+[@edquistSystemsInnovationTechnologies1997]. In this thesis, I identify the institutional settings that favors innovation of
+environmental technologies, as well as those that may have a negative or mixed effect.
 
-One of the main challenges of the NIS approach is to operationalize it
-so that it can be an useful for empirical research. This challenge has
+One of the main challenges of the NIS approach is to operationalize it in a way that it can be an useful for empirical research. This challenge has
 been recognized by one of the proponents of the concept: "This emphasis
 on the complex relations between elements constitutes a major advantage
 of the systems of innovation approach. However, it also constitutes a
@@ -225,7 +218,7 @@ economic growth.
 
 The early literature on National Innovation Systems consisted on case
 studies without any serious comparative attempt. For example the title
-of @nelsonNationalInnovationSystems1993a book, "National Innovation
+of @nelsonNationalInnovationSystems1993a's book, "National Innovation
 Systems: A Comparative Analysis", may be well considered misleading,
 since it is a collection of case studies without an unifying conceptual
 base and no comparative effort. The National Innovation System section
@@ -285,7 +278,7 @@ On the other hand, different institutions within a single country can
 have different and even contrasting effects on the innovative capacity
 of a particular sector. In the case of the sector of environmental
 technologies, usually there are lock-ins created by path dependencies in
-the innovation system that tend to perpetuate innovation in "brown"
+the innovation system that tend to perpetuate innovation in "dirty"
 technologies As mentioned by @kempRegimeShiftsSustainability1998 "Firms
 vested in the old technologies will be more inclined to reformulate
 their existing products than do something radically new that may involve
@@ -301,10 +294,8 @@ resistance, even inside the organization in which they are produced"
 
 One major development of the NIS theory's empirical strength comes from
 the National Innovative Capacity (NIC) model. There are several
-challenges when trying to measure a complex concept like the NSI. The
-NIC approach tries to find the most appropriate indicators, no only of
-inputs and outputs (like in a linear model), but also on interactions
-and links between actors, and institutional setting. As mentioned by
+challenges when trying to measure a complex concept like the NIS. The
+NIC approach tries to find the most appropriate indicators, no only of inputs and outputs (like in a linear model), but also on interactions and links between actors, and institutional setting. As mentioned by
 @balzatRecentTrendsResearch2004 "The NIC model can be considered as an
 ingenious contribution to the NIS approach, because it builds a bridge
 between elements of economic growth theory and a modern, systemic
@@ -314,8 +305,8 @@ strength". It focuses on evaluating how innovation varies with
 country-level policy specificity, using an econometric model based on an
 internationally comparable set of indicators.
 
-Their empirical framework takes on the challenge identified by
-@edquistSystemsInnovationTechnologies1997 that "quantification is
+This empirical framework takes on the challenge identified by
+@edquistSystemsInnovationTechnologies1997 when he admitted that "quantification is
 important. This is needed for the development of a more sophisticated
 systemic and interactive view of innovation processes. It is, however,
 not an easy task. More work is needed on identification of the central
@@ -334,7 +325,9 @@ ideas-driven growth [@romerEndogenousTechnologicalChange1990]; (2)
 microeconomic models of national competitive advantage and industrial
 clusters [@porterCompetitiveAdvantageNations1998]; and (3) the
 literature on national innovation systems
-[@nelsonNationalInnovationSystems1993]". I argue that the key components
+[@nelsonNationalInnovationSystems1993]". 
+
+I argue that the key components
 of the ideas-driven growth and the industrial clusters are also
 developed and incorporated in a comprehensive approach of the NIS such
 as that which informs this thesis, and as such, the NIC can be actually
@@ -383,10 +376,10 @@ and others. In particular, in addition to the indicators used by
 @porterNationalInnovativeCapacity2002, I include two new sets of
 indicators: (1) Those related specifically to the sectoral environmental
 policies that should affect the 'sectoral system' of environmental
-innovation, as explained above; and (2) Social and political factors
-that shape both the innovation environment and the capacity of the State
+innovation, as explained above; and (2) The quality of the "governance environment"
+that shape the capacity of the State
 to actually enforce environmental policies and regulations, which
-influences the incentive structure for firms to adopt green
+influences the incentive structure for firms to produce and consumers to adopt green
 technologies.
 
 Since innovation processes are interactive, I give high importance to
@@ -398,9 +391,7 @@ uses two indicators, higher education and venture capital. In this
 thesis, I drop the venture capital because the data is not very reliable
 for my sample and because in the analysis of
 @furmanDeterminantsNationalInnovative2002 it does not appear to be
-significant, and rely on proxies like the share of Higher Education R&D
-financed by the business sector. More details are provided in the
-Methodology section.
+significant.
 
 ## Environmental Innovation
 
@@ -430,8 +421,8 @@ looks at the micro level, analyzing firm behavior or particular sectors
 @geeEcoInnovationSystemsProblem2011;
 @horbachDeterminantsEnvironmentalInnovation2008]. However, there is very
 few empirical literature on how environmental policy interacts with the
-innovation environment and the more broadly institutional framework to
-promote green innovation. Originally, most of the studies focus on
+common innovation infrastructure and with governance variables to
+promote green innovation. Originally, most of the studies focused on
 single countries and only more recently some literature has adopted a
 comparative and international approach
 [@poppEnvironmentalPolicyInnovation2019].
@@ -446,7 +437,7 @@ innovation that will guide this work.
 Traditionally, environmental innovation has been framed in the
 neoclassical perspective, in which rational, utilitarian actors "are
 preoccupied with short run allocative questions leading to equilibrium"
-[@andersenGreeningInnovationSystems2009] in perfect competition. In this
+in perfect competition [@andersenGreeningInnovationSystems2009]. In this
 perspective, environmental problems are framed in the market failure
 theory. In particular, in the neoclassical framework, environmental
 innovation is subject to a "double externality" problem. Innovation in
@@ -461,7 +452,7 @@ in a transition period, until the externalities can be fully
 internalized.
 
 Most of the literature within the neoclassical framework has studied the
-role of policy in addressing those twin externalities, analyzing at at
+role of policy in addressing those twin externalities, analyzing at the
 macro level the impact of R&D subsidies and innovation promotion
 policies on the one hand, and carbon taxes, tradable permits, and in
 general the stringency of environmental policy on the other
@@ -473,13 +464,12 @@ innovation that may partially or more than fully offset the costs of
 complying with them"
 [@porterNewConceptionEnvironmentCompetitiveness1995].
 
-The Porter Hypothesis takes two versions
-[@poppEnvironmentalPolicyInnovation2019], the weak version hypothesizes
+The Porter Hypothesis takes two versions, the weak version hypothesizes
 that environmental stringent policy spurs environmental innovation;
 while the strong version hypothesizes that new innovation spurred by
 environmental regulation is sufficient to offset the costs of such
 regulation, so that the general productivity of firms on the regulated
-sector can actually increase after the regulation takes place. Many
+sector can actually increase after the regulation takes place [@poppEnvironmentalPolicyInnovation2019]. Many
 studies have tested both versions, often reaching different conclusions.
 For instance @francoEffectWithinSectorUpstream2017 found support for
 both the weak and string versions of the Porter Hypothesis. On a large
@@ -487,7 +477,7 @@ meta-analysis, @cohenImpactEnvironmentalRegulation2018 points out that,
 in general, there has been strong support for the weak version, but more
 controversy has surrounded the strong version, with most studies in the
 1990s suggesting a negative impact of environmental constrains on
-productivity; but and some suggestions of positive effects more
+productivity; there are however some suggestions of positive effects more
 recently. They also find more support for the Porter Hypothesis at the
 state, regional or country level than at the firm or industry level.
 
@@ -510,13 +500,13 @@ externalities characterizing clean innovations, the private clean
 innovation machine cannot be expected to be socially effective on its
 own".
 
-As mentioned by @andersenGreeningInnovationSystems2009, there are four
+There are four
 concepts from the perspective of innovation systems thinking that hold
 particular relevance to this thesis. These include the notion of 'system
 failures', the focus on path dependence and cumulative causation, the
 significance of connecting sectoral or specialization analyses with
 national and global analyses, and the comprehension of long-term
-industrial dynamics and transformation.
+industrial dynamics and transformation [@andersenGreeningInnovationSystems2009].
 
 The main challenge from the point of view of evolutionary economics is
 how to ignite the engine of green innovation in the face of the fact
@@ -527,7 +517,7 @@ incumbent technologies is often institutionalised within the rules of
 the regimes making it difficult for innovations to break through"
 [@kivimaaCreativeDestructionMere2016].
 
-To understand why this is so, it is necessary to introduce the concept
+To understand why this is so, we can relate to the concept
 of "technological regime" introduced by
 @nelsonEvolutionaryTheoryEconomic1982. The basic idea is that there are
 routines and beliefs of what is possible and what is feasible that are
@@ -561,13 +551,24 @@ policy to create the right incentives and steer the technological
 development in the direction of sustainability, "aiming at 'unlocking' a
 socio-technical system to provide opportunities for alternative, more
 sustainable systems to develop and diffuse"
-[@faberModelsEvolutionaryEconomics2009]". Doing so requires what
-@kivimaaCreativeDestructionMere2016 has called "disruptive policy mixes
-aiming for systemic change", challenging the lock-ins and fostering a
-transition in the technological regime.
+[@faberModelsEvolutionaryEconomics2009]. Doing so requires what
+@kivimaaCreativeDestructionMere2016 have called "disruptive policy mixes aiming for systemic change", challenging the lock-ins and fostering a transition in the technological regime.
 
 In sight of that, this thesis evaluates a range of variables across
-policy domains, including not only the environmental and innovation
-policies, but also the broader legal and political conditions that are
-required for a transition to a clean environmental technology regime, as
-potential drivers of new-to-the-world environmental technologies.
+policy domains, including both common innovation and sectoral policies, as well as broader governance quality variables that are required for a transition to a clean environmental technology regime, as potential drivers of new-to-the-world environmental technologies.
+
+## Green National Innovative Capacity
+
+With the building blocks outlined above, it is now possible to construct a new concept, the "green national innovative capacity", which can be defined as a country's potential to produce a steady stream of innovations in environmental-friendly technologies.
+
+The green national innovative capacity is defined by three main variables:
+
+- The common innovation infrastructure: It comprises most of the elements and institutions of the National Innovation System, that allow the country to produce innovation in general. This variable includes most of the indicators of the National Innovative Capacity framework, including the resources dedicated to R&D, and the linkages between different actors of the National Innovation System.
+
+- Sectoral policies: It includes the policies that affect directly the "sector" of environmental technologies. This contains both the stringency of the environmental policy, and the efforts dedicated specifically to foster environmental innovation.
+
+- Quality of governance: It includes indicators that measure the capacity of the State to produce sound policies and to legitimately enforce them.
+
+As derived from the previous discussion, I expect all of the three variables to interact in creating the conditions for a country's capacity to produce environmental innovations. I hypothesize that sectoral policies like a more stringent environmental policy and higher investment in green R&D, as well as better quality of governance, will increase the green national innovative capacity.
+
+The common innovation infrastructure is also considered a necessary ingredient of the capacity to innovate in green technologies. However, the effect of a very developed common innovation infrastructure can have effects that are more uncertain than in the two other cases, given the path-dependence of very strong industrial sectors that produce traditional technologies (as opposed to green technologies).

@@ -3,22 +3,73 @@
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
 
-# The First Appendix
+# Variables and operacionalization
 
 <!--
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
+```{=latex}
+\arrayrulecolor{black}
+\begin{longtable}{!{\color{black}\vrule}>{\hspace{0pt}}m{0.098\linewidth}|>{\hspace{0pt}}m{0.535\linewidth}!{\color{black}\vrule}>{\hspace{0pt}}m{0.244\linewidth}!{\color{black}\vrule}>{\hspace{0pt}}m{0.062\linewidth}!{\color{black}\vrule}}
+\caption{Indicators included in the model}\\ \hline
+\multicolumn{1}{!{\color{black}\vrule}>{\centering\hspace{0pt}}m{0.098\linewidth}|}{\textbf{Indicator}} & \multicolumn{1}{>{\centering\hspace{0pt}}m{0.535\linewidth}!{\color{black}\vrule}}{\textbf{Definition}}                                                                                                   & \multicolumn{1}{>{\centering\hspace{0pt}}m{0.244\linewidth}!{\color{black}\vrule}}{\textbf{Justification}} & \multicolumn{1}{>{\centering\arraybackslash\hspace{0pt}}m{0.062\linewidth}!{\color{black}\vrule}}{\textbf{Source}}  \endfirsthead \hhline{>{\arrayrulecolor{black}}|>{\arrayrulecolor{black}}====>{\arrayrulecolor{black}}|}
+\multicolumn{4}{!{\color{black}\vrule}>{\centering\arraybackslash\hspace{0pt}}m{0.939\linewidth}|}{\textbf{Dependent variable}}                                                                                                                                                                                                                                                                                                                                                                                                                        \\ \arrayrulecolor{black}\hline
+Green Patents                                                                                           & Number of inventions developed
+  by country's inventors, independent of the jurisdictions where patent
+  protection is sought                                                                             & (Furman
+  et al., 2002; Moro et al., 2019)                                                                 & OECD                                                                                                                \\ \hline
+\multicolumn{4}{!{\color{black}\vrule}>{\centering\arraybackslash\hspace{0pt}}m{0.939\linewidth}|}{\textbf{Common innovation infrastructure}}                                                                                                                                                                                                                                                                                                                                                                                                          \\ \hline
+GERD                                                                                                    & Gross RD investment (PPP\$)                                                                                                                                                                               & (Andrijauskiene
+  et al., 2021; Furman et al., 2002)                                                       & OECD                                                                                                                \\ \arrayrulecolor{black}\hline
+GERD performed by HES                                                                                   & Share of GERD performed by the
+  Higher Education Sector                                                                                                                                                  & (Andrijauskiene
+  et al., 2021; Furman et al., 2002)                                                       & OECD                                                                                                                \\ \hline
+GERD financed by BS                                                                                     & Share of GERD financed by the
+  business sector                                                                                                                                                           & (Andrijauskiene
+  et al., 2021; Furman et al., 2002)                                                       & OECD                                                                                                                \\ \hline
+RD personnel                                                                                            & Total RD personnel (FTE)                                                                                                                                                                                  & (Andrijauskiene
+  et al., 2021; Furman et al., 2002)                                                       & OECD                                                                                                                \\ \hline
+Public spending in HE                                                                                   & Public spending in tertiary education
+  (\% of GDP)                                                                                                                                                       & (Andrijauskiene
+  et al., 2021; Furman et al., 2002)                                                       & OECD                                                                                                                \\ \arrayrulecolor{black}\hline
+\multicolumn{4}{!{\color{black}\vrule}>{\centering\arraybackslash\hspace{0pt}}m{0.939\linewidth}|}{\textbf{Sectoral policies}}                                                                                                                                                                                                                                                                                                                                                                                                                         \\ \hline
+Environmental RD                                                                                        & Environmentally related RD expenditure (\% GDP)                                                                                                                                                           & ~                                                                                                          & OECD                                                                                                                \\ \arrayrulecolor{black}\hline
+EPSI                                                                                                    & Environmental Policy Stringency Index                                                                                                                                                                     & (Gerlagh et al., 2008; Horbach, 2008; Johnstone et al., 2012; Moro
+  et al., 2019)                         & OECD                                                                                                                \\ \hline
+Green Taxes                                                                                             & Environmentally related tax
+  revenue (\% of total tax revenue)                                                                                                                                           & (Karmaker et al., 2021;
+  Veugelers, 2012)                                                                 & OECD                                                                                                                \\ \arrayrulecolor{black}\hline
+\multicolumn{4}{|>{\centering\arraybackslash\hspace{0pt}}m{0.939\linewidth}|}{\textbf{Quality of Governance}}                                                                                                                                                                                                                                                                                                                                                                                                                                          \\ \hline
+Regulatory Quality                                                                                      & Perceptions of the ability of the
+  government to formulate and implement sound policies and regulations that permit
+  and promote private sector development                                             & (Andrijauskiene et al., 2021;
+  Malik, 2023; Zang et al., 2019)                                            & World Bank                                                                                                          \\ \arrayrulecolor{black}\hline
+Control of corruption                                                                                   & Perception of the extent to
+  which public power is exercised for private gain, including both petty and
+  grand forms of corruption, as well as "capture" of the state by
+  elites and private interests & (Andrijauskiene et al., 2021;
+  Dincer, 2019; Ege  Ege, 2019)                                              & World Bank                                                                                                          \\ \hhline{|>{\arrayrulecolor{black}}====>{\arrayrulecolor{black}}|}
+\end{longtable}
+\arrayrulecolor{black}
+```
+           
 
-**In the main Rmd file**
-
-```{r ref.label='include_packages', results='hide', echo = TRUE}
+```{r ref.label='include_packages', results='hide', echo = FALSE}
 ```
 
-**In Chapter \@ref(ref-labels):**
-
-```{r ref.label='include_packages_2', results='hide', echo = TRUE}
+```{r ref.label='include_packages_2', results='hide', echo = FALSE}
 ```
 
-# The Second Appendix, for Fun
+# Hausman Test
+
+```{r, echo=FALSE, include=FALSE}
+library(broom)
+ph_test_1 <- phtest(exp_1, exp_3) 
+```
+
+
+```{r, echo=FALSE}
+ph_test_1
+```
+
