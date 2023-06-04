@@ -28,7 +28,7 @@ respectively, and are thus excluded from the analysis.
 
 ## Building the dependent variable: The use of patent statistics
 
-The main dependent variable, that is to say, the outcome that is to be explaines, is the output of environmental innovation in OECD countries. To measure it, I use the number of "green patents" produced by country. By green patents, I understand patents in environmental technologies, as explained below.
+The main dependent variable, that is to say, the outcome that is to be explained, is the output of environmental innovation in OECD countries. To measure it, I use the number of "green patents" produced by country. By green patents, I understand patents in environmental technologies, as detailed  below.
 
 Patents have long been used as a
 measure of the output of innovative activity. One of the first to point
@@ -38,11 +38,11 @@ available; they are by definition related to inventiveness, and they are
 based on what appears to be an objective and only slowly changing
 standard". Another advantage pointed out by
 @hascicMeasuringEnvironmentalInnovation2015 is their comparability,
-which make them specially suited for cross-country comparisons like the
+which make them especially suited for cross-country comparisons like the
 one carried out in this thesis.
 
 That does not mean that patents come without drawbacks. For instance,
-patents do not cover the full spectrum of the innovative output: they do not capture process innovation, or social innovation, just to mention two exaples. Another drawback is that patents do not account for the
+patents do not cover the full spectrum of the innovative output: they do not capture process innovation, or social innovation, just to mention two examples. Another drawback is that patents do not account for the
 quality of inventions or their diffusion. Indeed, it is known that the
 economic value of patents is very skewed, with a few of them worth a
 lot; and most of them with very low economic value
@@ -65,14 +65,14 @@ In terms of the geographical attribution, a patent is assigned to a country acco
 It is common knowledge that the production of technology is general, or at least of patented
 technology is very concentrated in a few countries and regions
 [@oecdOECDPatentStatistics2009]. There are various reasons for that.
-First, a large part of the innovative activity happen in big
+First, a large part of the innovative activity happens in big
 laboratories located in a few countries (and even a few regions) of the
 world. Second, there are differences in the patenting propensity of
 firms, given the different regulations and the costs associated to
 patenting in different jurisdictions.
 
-In general, the OECD countries included in this thesis are among the most innovative and technologically
-endowed in the world. Indeed, 17 out the 20 countries that filed more applications in 2020
+The OECD countries included in this thesis are among the most innovative and technologically
+endowed in the world. Indeed, 17 out the 20 countries that filed more patent applications in 2020
 were members of the OECD (the other three were China, India and Russia). However, patenting activity has shifted in the last decade. China has
 taken a more important role, both in terms of origin of the patents
 (that is, the country of residency of the fist inventor named in the
@@ -80,7 +80,7 @@ patent filing) and as destination for patenting i.e. the filings in the Chinese 
 (CPA), both of which accounted for roughly 50% of the world's patenting
 activity in 2020 [@wordlintellectualpropertyorganizationWorldIntellectualProperty2021].
 
-In total OECD-countries inventors filed 670,565 environmental patents from 2000 to 2020, but even there the distribution is quite skewed, with some countries concentrating most of the production of
+In total, OECD-countries inventors filed 670,565 environmental patents from 2000 to 2020, but even there the distribution is quite skewed, with some countries concentrating most of the production of
 technologies and others with very little patenting activity. Figure \@ref(fig:gp-by-country) shows the patenting activity in
 environmental technologies of the OECD countries from 2000 to 2019. This figure shows that most of the patenting in environmental technologies happen in six countries: the United States, Japan, Korea, Germany, France and the United Kingdom. Out of those, the United States, Japan, and in some years Korea, generate on average more patents than the 30 OECD countries with less patenting taken together (the line "Others" in the chart includes the remaining 30 OECD countries). For instance, in 2019, out of the 33,420 patents filled within the OECD, 19,148 (57.2%) were attributed to an inventor residing in one the six countries mentioned above.
 
@@ -232,7 +232,7 @@ gp_by_tech_dom
 
 ## The drivers of green innovation
 
-In this section, I present the data that is used to measure the drivers of environmental innovation. As mentioned before, there are three main variables considered as determinant in shaping the green national innovative capacity: the sectoral policies, moslty environmental policies, that target directly or indirectly the production of environmental technologies; the common innovation infrastructure that includes the institutional framework necessary for innovation in general; and the quality of the governance, that captures the broader institutional setting and the ability of the State to enforce norms and regulations. 
+In this section, I present the data that is used to measure the drivers of environmental innovation. As mentioned before, there are three main variables considered as determinant in shaping the green national innovative capacity: the sectoral policies, mostly environmental policies, that target directly or indirectly the production of environmental technologies; the common innovation infrastructure that includes the institutional framework necessary for innovation in general; and the quality of the governance, that captures the broader institutional setting and the ability of the State to enforce norms and regulations. 
 
 ### Sectoral Policies
 
@@ -251,7 +251,7 @@ stringency in the OECD, as measured by the EPSI. We can see that, on average, th
 been an increase in the environmental policy stringency, which is
 consistent with the increased preoccupation for effects of climate change
 and environmental degradation in general. However, it is worth noting
-that most of the increase happens in the fist decade of analysis, that
+that most of the increase happens in the first decade of analysis, that
 is from 2000 to 2010. From 2010 to 2020 the average indicator has kept
 quite stable with only very minor increases.
 
@@ -350,7 +350,7 @@ Finally, I also include the R&D expenditure in environmental technologies. This 
 
 Figure \@ref(fig:env-rd), shows the environmental R&D efforts of OECD countries. In panel A we observe the heterogeneity in terms of the relative share of resources dedicated to environmental R&D in OECD countries. New Zealand is the country that dedicates more resources (relative to their total R&D expenditure) to environmental R&D with 12.48%, while Switzerland and the US are the ones that dedicate the less in relative terms. Panel B shows that there was an (relative) increase in R&D budgets until 2007, but a general decrease after that. In 2019, OECD countries dedicated a smaller share of their R&D budgets to environmental R&D as compared to 2000.
 
-Two main conclusions emerge from the exploration of the data in environmental policies: the first is that countries can (and actually do) chose different policy mixes to achieve their environmental goals. New Zelaland is an example of a country that has very low green taxes, but very high investment in green R&D. The second and perhaps more striking is that, even as countries step up their compromises in environmental protection, that is not reflected in the indicators. On the contrary, environmental stringency is not increasing, and green taxes and environmental R&D are even decreasing.
+Two main conclusions emerge from the exploration of the data in environmental policies: the first is that countries can (and actually do) chose different policy mixes to achieve their environmental goals. New Zealand is an example of a country that has very low green taxes, but very high investment in green R&D. The second and perhaps more striking is that, even as countries step up their compromises in environmental protection, that is not reflected in the indicators. On the contrary, environmental stringency is not increasing, and green taxes and environmental R&D are even decreasing.
 
 ```{r env-rd-code, include=FALSE, echo=FALSE}
 ## Environmental R&D
@@ -393,7 +393,7 @@ plot_grid(env_rd2, env_rd, nrow = 2, labels = c("A", "B"), rel_heights = c(2,2))
 
 One significant proposition put forth in this thesis is that sector-specific policies have the potential to promote environmental innovation. However, it is crucial to have a robust innovation infrastructure in place, even though its impacts need to be properly evaluated and managed to overcome the path-dependencies discussed in the theoretical framework.
 
-To asses the common innovation infrastructure, I use a battery of six indicators, all taken from the OECD Main Science and Technology Indicators. The first is the Gross Expenditure in R&D, which measures the total expenditure on R&D from all sources, i.e. Government, business sector and higher education sector. This is the main indicator or innovation input. In a simplistic linear model of innovation [@godinLinearModelInnovation2006] it is the *only* input necessary to foster innovation. In the case of this thesis, I expect a positive impact on environmental innovation, but nuanced by the necessary integration of other elements in a systemic perspective.
+To assess the common innovation infrastructure, I use a battery of six indicators, all taken from the OECD Main Science and Technology Indicators. The first is the Gross Expenditure in R&D, which measures the total expenditure on R&D from all sources, i.e. Government, business sector and higher education sector. This is the main indicator or innovation input. In a simplistic linear model of innovation [@godinLinearModelInnovation2006] it is the *only* input necessary to foster innovation. In the case of this thesis, I expect a positive impact on environmental innovation, but nuanced by the necessary integration of other elements in a systemic perspective.
 
 Figure \@ref(fig:gerd1) shows the GERD and GERD per capita of OECD countries in 2000 and 2020. In aggregate terms, the United States is by far the country that invest the most in R&D. In 2020, the US accounted for 44% of the total investment in R&D in OECD countries. However, when including the size of the population, other countries like Israel and Korea reach a very similar level to the US.
 
@@ -490,7 +490,7 @@ gerd_chart6 <- ggplot(df2, aes(x = LOCATION, y = gerd.per.capita, fill = as.fact
 plot_grid(gerd_chart5, gerd_chart6, nrow = 2, labels = c("A", "B"), rel_heights = c(1, 1.3))
 ```
 
-The second indicator in this category is the share of R&D personnel per thousand total employment, which measures of the intensity of the human resources dedicated to pursuing activities related to innovation. Thirdly, I include the country’s investment in tertiary education as percentage of GDP. The tertiary education has a double effect on innovation: one one side, it trains the engineers and other knowledge professionals that are instrumental for the innovation processes; on the other hand, it is a major source of research, specially in basic science, which underlies many technological advancements and given its (mostly) open nature, can have large positive downstream effects. I also expect a positive impact of both of those indicators on the production of environmental technology.
+The second indicator in this category is the share of R&D personnel per thousand total employment, which measures of the intensity of the human resources dedicated to pursuing activities related to innovation. Thirdly, I include the country’s investment in tertiary education as percentage of GDP. The tertiary education has a double effect on innovation: one one side, it trains the engineers and other knowledge professionals that are instrumental for the innovation processes; on the other hand, it is a major source of research, especially in basic science, which underlies many technological advancements and given its (mostly) open nature, can have large positive downstream effects. I also expect a positive impact of both of those indicators on the production of environmental technology.
 
 Figure \@ref(fig:ter-ed-spending) shows the public spending in higher education in OECD countries in 2019 (latest available year) and in 2000. By 2019, OECD countries dedicated an average 1.17% of GDP to public higher education; a slight increase from the 1.09% on average in 2000.
 

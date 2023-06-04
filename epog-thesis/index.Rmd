@@ -1,5 +1,6 @@
 ---
 title: 'Green National Innovative Capacity'
+subtitle: "The drivers of Green Innovation in OECD countries"
 author: 'Jeff Rodriguez'
 date: 'June 2023'
 institution: 'Université de Technologie de Compiègne, Sorbonne Université, Université Paris Cité, Uniiversità degli Studi di Torino'
@@ -7,7 +8,8 @@ institution: 'Université de Technologie de Compiègne, Sorbonne Université, Un
 advisor: 'Diego Useche, PhD'
 # If you have more two advisors, un-silence line 7
 altadvisor: 'Aldo Geuna, PhD'
-department: 'Economics'
+altadvisor2: 'Armanda Cetrulo, PhD'
+department: 'Economic Policy for the Global Transition (EPOG+)'
 degree: 'Master of Science'
 knit: bookdown::render_book
 site: bookdown::bookdown_site
@@ -16,6 +18,15 @@ site: bookdown::bookdown_site
 # switch out \onehalfspacing with \singlespacing or \doublespacing, if desired.
 header-includes:
     - \usepackage{setspace}\onehalfspacing
+    - \usepackage{tabularray}
+    - \usepackage{adjustbox}
+    - \usepackage{array}
+    - \usepackage{longtable}
+    - \usepackage{hhline}
+    - \usepackage{colortbl}
+    - \usepackage{caption}
+    - \usepackage{ragged2e}
+    - \usepackage{amsmath}
 
 # This will automatically install the {remotes} package and {thesisdown}
 # Change this to FALSE if you'd like to install them manually on your own.
@@ -30,33 +41,53 @@ output:
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 
+# dedication: |
+#   To Wes, always. I just wish you were here.
+
+acknowledgements: |
+  `r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "00--prelim.Rmd")), collapse = "\n  ")`
+
+#   This thesis would not have been possible without the support of a great lot of people:
+#     
+#     First and foremost, my family, without whose love and support this would have been impossible.
+#     
+#     My professors, both in Turin and in Paris, who inspired and gave the tools to tackle this challenge. In particular, my gratitude to Aldo Geuna for the opportunity of working and learning along him.
+#     
+#      Diego Useche, my main advisor, had the kindness to help me even without knowing me in advance. Thank you.
+#      
+#      My gratitude also to Armanda Cetrullo who gave a series of outstanding lectures and accepted to be part of my jury.
+#      
+#     Last but not least, my friends and classmates from EPOG. This jouney was worth it for many reasons. You are the first.
+
 # If you are creating a PDF you'll need to write your preliminary content 
 # (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
 # for the .RMD files. If you are NOT producing a PDF, delete or silence
 # lines 25-39 in this YAML header.
+
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "00-abstract.Rmd")), collapse = "\n  ")`
-# If you'd rather include the preliminary content in files instead of inline
-# like below, use a command like that for the abstract above.  Note that a tab 
-# is needed on the line after the `|`.
-acknowledgements: |
-  I want to thank a few people.
-dedication: |
-  You can have a dedication here if you wish. 
-preface: |
-  This is an example of a thesis setup to use the reed thesis document class 
-  (for LaTeX) and the R bookdown package, in general.
+#   Innovation has long been recognized as a main driver of economic growth, but more recently the challenges posed by the green transition have increased the interest in the role of innovation as a transformative force to tackle societal challenges. However, the factors that drive environmental innovation are not well understood, particularly at the national level. This thesis aims to addressing this gap in the literature by investigating the determinants of environmental innovation in OECD countries. It builds on two related streams of literature: On the one side the literature of National Systems on Innovation; and on the other, the literature on environmental innovation, both within the framework of evolutionary economics. It contributes to the literature by introducing the concept of “Green National Innovative Capacity”, understood as country’s potential to produce a steady stream of innovations in environmental-friendly technologies. Empirically, an econometric model is used to test the impact of the common innovation infrastructure; sectoral policies and the quality of governance in the production of environmental-related patents. It finds that there are significant differences in the green innovative capacity of OECD countries. The production of environmental technologies is concentrated mainly in 6 countries that account for more than half the production of green technologies in the OECD. The evidence suggests that sectoral policies (i.e. stringent environmental policy and investment in green R&D) have strong positive effects on the production of environmental technologies. The common innovation infrastructure (investment in R&D and higher education) also have a positive effect on green innovation, but their effect is nuanced by some elements of the National Innovation System that generate lock-ins and sunk costs that hinder innovation in green technologies. The evidence about the effect of the quality of governance, however, is very week and requires further research.
+  
 abbreviations:
-  # ABC: American Broadcasting Company
-  # CBS: Colombia Broadcasting System
-  # CUS: Computer User Services
-  # PBS: Public Broadcasting System
-  # NBC: National Broadcasting Company
+  BERD: Business Sector Spending in Research and Development
+  EPSI: Environmental Policy Stringency Index
+  GDP: Gross Domestic Product
+  GERD: Gross Domestic Spending in Research and Development
+  HE: Higher Education Sector
+  HERD: Higher Education Sector Spending in Research and Development
+  NIC: National Innovative Capacity
+  NIS: National Innovation System
+  R+D: Research and Development
+  SIS: Sectoral Innovation System
+  SE: Standard Errors
+  VIF: Variance Inflation Factor
+
 # Note that abbreviations in lowercase letters will NOT be automatically capitalized
 # Delete or silence the abbreviations section if you do not want a list of abbreviations
   
 # Specify the location of the bibliography below
 bibliography: Green National Innovative Capacity.bib
+#link-citations: TRUE
 # Download your specific csl file and refer to it in the line below.
 csl: csl/apa.csl
 lot: true
@@ -136,12 +167,12 @@ Innovation and technological change have for a long time been recognized
 as main drivers of economic growth [@solowTechnicalChangeAggregate1957;
 @romerEndogenousTechnologicalChange1990;
 @nelsonBringingInstitutionsEvolutionary2002;
-@lundvallLearningEconomyEconomics2016]. However the increasing concerns
+@lundvallLearningEconomyEconomics2016]. Lately, the increasing concerns
 about environmental degradation and climate change have raised the
-interest in the role innovation can play in other areas, particularly as
-a transformative force to tackle societal challenges like the climate
+interest in the role that innovation can play in other
+areas, particularly as a transformative force to tackle societal challenges like the ongoing climate
 crisis. There is a growing consensus that radical innovation is
-necessary to achieve the goals set by the world in terms of reduction of
+necessary to achieve the goals set by the international comunity in terms of reduction of
 emissions, and also in general for a sustainable future
 [@aghionColdStartGreen2009;
 @delriogonzalezEmpiricalAnalysisDeterminants2009;
@@ -152,8 +183,8 @@ However, the factors that drive environmental innovation are not well
 understood, particularly at the national level. This thesis aims to
 address this gap in the literature by investigating the determinants of
 environmental innovation in OECD countries between 2000 and 2020.
-Specifically, the thesis examines the role of national innovation
-infrastructure, environmental policy, and legal and political factors in
+Specifically, the thesis examines the role of common national innovation
+infrastructure, sectoral (environmental) policies, and the quality of governance in
 driving environmental innovation. In so doing, it builds on the
 literature on National Innovation Systems
 [@lundvallNationalSystemsInnovation1992], and in particular, adapting
@@ -162,7 +193,7 @@ the empirical framework of National Innovative Capacity developed by
 
 The main contributions of this thesis are twofold. First, in the
 framework of the "twin transitions" digital and environmental, it gives
-insights on the factors driving green innovative capacity at the
+insights on the factors driving innovation in environmental technologies at the
 national level. Indeed, the economic literature has explored the main
 determinats of eco-innovation at the firm level
 [@brunnermeierDeterminantsEnvironmentalInnovation2003;
@@ -193,14 +224,12 @@ mixes across different levels and sectors.
 
 For the empirical work, the thesis uses a panel data fixed effects model
 on a panel OECD countries between 2000-2020. Green innovation is
-measured using patent data. The main explanatory variables are national
-innovation infrastructure, environmental policy, and legal and political
-factors. Negative Binomial and Poisson regression models are also used
-to test the robustness of the findings. The data is sourced from the
-OECD Green Growth Indicators Databse, as well as other publicly
+measured using patent data. The main explanatory variables are the common
+innovation infrastructure, sectoral (environmental) policies, and the quality of the governance. The data is sourced mainly from the
+OECD, as well as other publicly
 available sources.
 
-[FINDINGS]
+It finds that there are significant differences in the green innovative capacity of OECD countries. The production of environmental technologies is concentrated mainly in 6 countries that account for more than half the production of green technologies in the OECD. The evidence suggests that sectoral policies (stringent environmental policy and investment in green R&D) have strong positive effects on the production of environmental technologies. The common innovation infrastructure (gross investment in R&D; investment in higher education) also have a positive effect on green innovation, but their effect is nuanced by some elements of the National Innovation System that generate lock-ins and sunk costs that hinder innovation in green technologies. The evidence about the effect of the quality of governance is however very weak and requires further research.
 
 The thesis proceeds as follows: The next section presents the main
 theoretical building blocks of the systemic approach that informs this
