@@ -172,7 +172,8 @@ about environmental degradation and climate change have raised the
 interest in the role that innovation can play in other
 areas, particularly as a transformative force to tackle societal challenges like the ongoing climate
 crisis. There is a growing consensus that radical innovation is
-necessary to achieve the goals set by the international comunity in terms of reduction of
+necessary to achieve the goals set by the international comunity
+in terms of reduction of
 emissions, and also in general for a sustainable future
 [@aghionColdStartGreen2009;
 @delriogonzalezEmpiricalAnalysisDeterminants2009;

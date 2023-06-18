@@ -352,6 +352,8 @@ Figure \@ref(fig:env-rd), shows the environmental R&D efforts of OECD countries.
 
 Two main conclusions emerge from the exploration of the data in environmental policies: the first is that countries can (and actually do) chose different policy mixes to achieve their environmental goals. New Zealand is an example of a country that has very low green taxes, but very high investment in green R&D. The second and perhaps more striking is that, even as countries step up their compromises in environmental protection, that is not reflected in the indicators. On the contrary, environmental stringency is not increasing, and green taxes and environmental R&D are even decreasing.
 
+As a hypothesis, this stagnation in the stringency of environmental policy and in general in the use of sectoral policies, could explain the decrease in environmental patenting observed in the previous section.
+
 ```{r env-rd-code, include=FALSE, echo=FALSE}
 ## Environmental R&D
 
